@@ -1,26 +1,1286 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #020409;
+  color: #f5f7fa;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================================
+   HOME
+================================ */
+
+.home {
+  min-height: 100vh;
+  background: #020409;
+  overflow-x: hidden;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 90px;
+
+  padding: 0 6vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 100;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 4, 9, 0.95),
+    rgba(2, 4, 9, 0)
+  );
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.brand span {
+  color: #008cff;
+}
+
+.navLinks {
+  display: flex;
+  gap: 38px;
+}
+
+.navLinks a {
+  position: relative;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: #7d8795;
+
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover,
+.navLinks .active {
+  color: white;
+}
+
+.navLinks .active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #008cff;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 8vw 80px;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(0, 102, 255, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      120deg,
+      #020409 0%,
+      #041020 50%,
+      #020409 100%
+    );
+}
+
+/* GRID */
+
+.gridBackground {
+  position: absolute;
+  inset: 0;
+
+  z-index: -3;
+
+  opacity: 0.08;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 30%,
+    black 70%,
+    transparent
+  );
+}
+
+/* BLUE GLOW */
+
+.blueGlow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  right: -200px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(0, 102, 255, 0.2);
+
+  filter: blur(150px);
+
+  z-index: -3;
+}
+
+/* DIAGONAL ACCENT */
+
+.heroLine {
+  position: absolute;
+
+  width: 500px;
+  height: 1px;
+
+  right: -100px;
+  top: 40%;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #008cff,
+    transparent
+  );
+
+  transform: rotate(-55deg);
+
+  opacity: 0.5;
+
+  z-index: 2;
+}
+
+/* ================================
+   PHOTO
+================================ */
+
+.photoWrapper {
+  position: absolute;
+
+  right: 7vw;
+  bottom: 0;
+
+  width: min(43vw, 650px);
+  height: 88vh;
+
+  z-index: -1;
+
+  opacity: 0.75;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 55%,
+    transparent 100%
+  );
+}
+
+.photoWrapper::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      #020409 0%,
+      transparent 45%
+    ),
+    linear-gradient(
+      to top,
+      #020409 0%,
+      transparent 45%
+    );
+}
+
+.heroPhoto {
+  object-fit: cover;
+  object-position: center top;
+
+  filter:
+    saturate(0.7)
+    contrast(1.1);
+}
+
+/* ================================
+   HERO CONTENT
+================================ */
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+
+  max-width: 850px;
+}
+
+.intro {
+  margin-bottom: 15px;
+
+  color: #8792a2;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 7px;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+
+  font-size: clamp(70px, 9vw, 145px);
+  line-height: 0.78;
+
+  letter-spacing: -7px;
+
+  font-weight: 900;
+}
+
+.heroTitle span {
+  display: block;
+}
+
+.gradientText {
+  color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #00a3ff 45%,
+    #0057ff 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  padding-bottom: 20px;
+}
+
+.welcome {
+  margin-top: 28px;
+
+  font-size: clamp(16px, 1.5vw, 22px);
+  line-height: 1.35;
+
+  font-weight: 300;
+
+  letter-spacing: 5px;
+
+  color: #a8b0bc;
+}
+
+/* ================================
+   AI DATA IOT
+================================ */
+
+.fields {
+  margin-top: 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.fields i {
+  display: block;
+
+  width: 45px;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    #008cff,
+    transparent
+  );
+}
+
+/* ================================
+   PAGE INDEX
+================================ */
+
+.pageIndex {
+  position: absolute;
+
+  right: 3vw;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  z-index: 5;
+}
+
+.pageIndex span {
+  color: #008cff;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.pageIndex div {
+  width: 1px;
+  height: 70px;
+
+  background: linear-gradient(
+    #008cff,
+    rgba(255, 255, 255, 0.15)
+  );
+}
+
+.pageIndex p {
+  font-size: 9px;
+
+  color: #667080;
+
+  letter-spacing: 4px;
+
+  writing-mode: vertical-rl;
+}
+
+/* ================================
+   SCROLL
+================================ */
+
+.scroll {
+  position: absolute;
+
+  left: 8vw;
+  bottom: 35px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  color: #687384;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  transition: color 0.3s ease;
+}
+
+.scroll:hover {
+  color: white;
+}
+
+.scrollArrow {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  color: #008cff;
+
+  transition: 0.3s ease;
+}
+
+.scroll:hover .scrollArrow {
+  border-color: #008cff;
+  transform: translateY(4px);
+}
+
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+  position: relative;
+
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 130px 8vw;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(0, 102, 255, 0.12),
+      transparent 35%
+    ),
+    #020409;
+}
+
+/* subtle blue glow */
+
+.aboutGlow {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  left: -300px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background: rgba(0, 102, 255, 0.15);
+
+  filter: blur(150px);
+
+  border-radius: 50%;
+}
+
+/* ================================
+   ABOUT CONTAINER
+================================ */
+
+.aboutContainer {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 9vw;
+
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* ================================
+   ABOUT PHOTO
+================================ */
+
+.aboutPhotoArea {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.aboutPhotoWrapper {
+  position: relative;
+
+  width: min(380px, 100%);
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #07101d;
+}
+
+.aboutPhoto {
+  object-fit: cover;
+
+  filter:
+    saturate(0.75)
+    contrast(1.08);
+}
+
+/* blue border accent */
+
+.photoAccent {
+  position: absolute;
+
+  width: min(380px, 100%);
+  aspect-ratio: 4 / 5;
+
+  border: 1px solid rgba(0, 140, 255, 0.6);
+
+  transform: translate(20px, 20px);
+
+  z-index: -1;
+}
+
+/* photo number */
+
+.photoNumber {
+  position: absolute;
+
+  left: 0;
+  top: -30px;
+
+  font-size: 10px;
+
+  color: #008cff;
+
+  letter-spacing: 3px;
+}
+
+/* ================================
+   ABOUT CONTENT
+================================ */
+
+.aboutContent {
+  max-width: 700px;
+}
+
+.sectionLabel {
+  color: #008cff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 25px;
+}
+
+.aboutContent h2 {
+  font-size: clamp(36px, 4vw, 50px);
+
+  line-height: 1;
+  letter-spacing: -2px;
+  font-weight: 800;
+}
+
+.aboutContent h2 span {
+  color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #008cff
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.aboutDescription {
+  margin-top: 35px;
+
+  max-width: 600px;
+
+  color: #8994a5;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   ABOUT FIELDS
+================================ */
+
+.aboutFields {
+  margin-top: 45px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.aboutFields div {
+  display: flex;
+
+  gap: 15px;
+}
+
+.aboutFields span {
+  color: #008cff;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.aboutFields p {
+  color: #d4d8df;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  letter-spacing: 2px;
+}
+
+/* ================================
+   SECTION NUMBER
+================================ */
+
+.sectionNumber {
+  position: absolute;
+
+  right: 3vw;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.sectionNumber span {
+  color: #008cff;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+.sectionNumber div {
+  width: 1px;
+  height: 70px;
+
+  background: linear-gradient(
+    #008cff,
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+.sectionNumber p {
+  font-size: 9px;
+
+  color: #667080;
+
+  letter-spacing: 4px;
+
+  writing-mode: vertical-rl;
+}
+
+/* ================================
+   HIGHLIGHTED PROJECTS
+================================ */
+
+.projectsSection {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 120px 7vw 100px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(0, 102, 255, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #020409 0%,
+      #03101d 100%
+    );
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.projectsHeader {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  gap: 30px;
+
+  margin-bottom: 55px;
+}
+
+.projectsHeader > div:first-child {
+  min-width: 0;
+}
+
+.projectsLabel {
+  margin-bottom: 15px;
+
+  color: #008cff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+}
+
+.projectsHeader h2 {
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+
+/* ================================
+   VIEW ALL
+================================ */
+
+.viewAllButton {
+  width: 200px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  padding: 0 16px 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #008cff;
+  color: white;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.viewAllButton:hover {
+  background: #0074d4;
+
+  transform: translateY(-3px);
+}
+
+.viewAllArrow {
+  font-size: 22px;
+
+  transition: transform 0.3s ease;
+}
+
+.viewAllButton:hover .viewAllArrow {
+  transform: translateX(5px);
+}
+
+/* ================================
+   PROJECT GRID
+================================ */
+
+.projectsGrid {
+  display: flex;
+  gap: 28px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  padding-bottom: 20px;
+
+  /* hide scrollbar */
+  scrollbar-width: none;
+}
+
+.projectsGrid::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================================
+   PROJECT CARD
+================================ */
+
+.projectCard {
+  position: relative;
+
+  /* Card tidak mengecil dan lanjut ke kanan */
+  flex: 0 0 400px;
+
+  display: block;
+  overflow: hidden;
+
+  background: #06111e;
+
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+}
+/* ================================
+   PROJECT ACTIONS
+================================ */
+
+.projectsActions {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+}
+
+.projectArrow {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #008cff;
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.projectArrow:hover {
+  background: #00a3ff;
+  transform: scale(1.08);
+}
+
+.projectArrowDisabled {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.projectArrowDisabled:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ================================
+   IMAGE
+================================ */
+
+.projectImage {
+  position: relative;
+
+  height: 440px;
+
+  overflow: hidden;
+
+  background: #07101c;
+}
+
+.projectImage img {
+  object-fit: cover;
+
+  transition:
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.5s ease;
+}
+
+.projectCard:hover .projectImage img {
+  transform: scale(1.06);
+
+  filter: brightness(0.7);
+}
+
+/* ================================
+   NUMBER
+================================ */
+
+.projectNumber {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 2;
+
+  padding: 7px 10px;
+
+  background: rgba(2, 4, 9, 0.75);
+
+  backdrop-filter: blur(8px);
+
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+/* ================================
+   OPEN ICON
+================================ */
+
+.projectOpen {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #008cff;
+
+  color: white;
+
+  font-size: 20px;
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.projectCard:hover .projectOpen {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* ================================
+   PROJECT INFO
+================================ */
+
+.projectInfo {
+  position: relative;
+
+  min-height: 180px;
+
+  padding: 25px 28px 28px;
+
+  transition: background 0.3s ease;
+}
+
+.projectCard:hover .projectInfo {
+  background: #008cff;
+  color: #ffffff;
+}
+
+.projectInfo > p {
+  margin-bottom: 13px;
+
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  transition: color 0.3s ease;
+}
+
+.projectCard:hover .projectInfo > p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.projectInfo h3 {
+  font-size: clamp(21px, 2vw, 29px);
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+
+  font-weight: 750;
+}
+
+/* ================================
+   TAGS
+================================ */
+
+.projectTags {
+  margin-top: 22px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.projectTags span {
+  padding: 6px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  color: #798697;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  transition:
+    color 0.3s ease,
+    border 0.3s ease;
+}
+
+.projectCard:hover .projectTags span {
+  color: white;
+
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ================================
+   BOTTOM DECORATION
+================================ */
+
+.projectsBottom {
+  margin-top: 60px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  color: #526070;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+.projectsBottom div {
+  height: 1px;
+
+  flex: 1;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1200px) {
+  .projectsHeader {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 30px;
+  }
+
+  .projectsActions {
+    justify-content: flex-start;
+  }
+
+  .projectsHeader h2 {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .navLinks {
+    gap: 15px;
+  }
+
+  .navLinks a {
+    font-size: 9px;
+  }
+
+  .hero {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .heroTitle {
+    font-size: clamp(60px, 17vw, 110px);
+    letter-spacing: -4px;
+  }
+
+  .photoWrapper {
+    width: 80vw;
+    right: -25vw;
+
+    opacity: 0.35;
+  }
+
+  .pageIndex {
+    display: none;
+  }
+
+  .scroll {
+    left: 25px;
+  }
+  .about {
+    padding: 100px 25px;
+  }
+
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .aboutPhotoArea {
+    justify-content: flex-start;
+  }
+
+  .aboutPhotoWrapper {
+    width: min(330px, 85%);
+  }
+
+  .photoAccent {
+    width: min(330px, 85%);
+  }
+
+  .aboutContent h2 {
+    font-size: clamp(40px, 10vw, 65px);
+  }
+
+  .sectionNumber {
+    display: none;
+  }
+  .projectsSection {
+    padding: 100px 25px;
+  }
+
+  .projectsHeader {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .projectCard {
+    flex: 0 0 75vw;
+  }
+
+  .projectImage {
+    height: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navLinks a:not(.active) {
+    display: none;
+  }
+
+  .intro {
+    font-size: 10px;
+  }
+
+  .heroTitle {
+    line-height: 0.85;
+  }
+
+  .welcome {
+    font-size: 13px;
+  }
+
+  .fields {
+    gap: 10px;
+  }
+
+  .fields i {
+    width: 20px;
+  }
+  .aboutFields {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .projectsHeader h2 {
+    font-size: 40px;
+  }
+
+  .viewAllButton {
+    width: 100%;
+  }
+
+  .projectImage {
+    height: 350px;
+  }
+
+  .projectCard {
+    flex: 0 0 85vw;
+  }
 }
