@@ -35,7 +35,7 @@ const projects = [
   },
 ];
 
-export default function HighlightedProjects() {
+export default function Project() {
   const projectsRef = useRef<HTMLDivElement>(null);
 
   const scrollProjects = (direction: "left" | "right") => {
@@ -61,8 +61,8 @@ export default function HighlightedProjects() {
       {/* HEADER */}
       <div className="projectsHeader">
         <div>
-          <p className="projectsLabel">SELECTED WORK</p>
-          <h2>HIGHLIGHTED PROJECTS</h2>
+          <p className="projectsLabel">LATEST PROJECTS</p>
+          <h2>What I've Been Working On</h2>
         </div>
 
         <div className="projectsActions">

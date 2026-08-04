@@ -1,0 +1,284 @@
+.about {
+  position: relative;
+
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 130px 8vw;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(0, 102, 255, 0.12),
+      transparent 35%
+    ),
+    #020409;
+}
+
+/* subtle blue glow */
+
+.aboutGlow {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  left: -300px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background: rgba(0, 102, 255, 0.15);
+
+  filter: blur(150px);
+
+  border-radius: 50%;
+}
+
+/* ================================
+   ABOUT CONTAINER
+================================ */
+
+.aboutContainer {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 9vw;
+
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* ================================
+   ABOUT PHOTO
+================================ */
+
+.aboutPhotoArea {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.aboutPhotoWrapper {
+  position: relative;
+
+  width: min(380px, 100%);
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #07101d;
+}
+
+.aboutPhoto {
+  object-fit: cover;
+
+  filter:
+    saturate(0.75)
+    contrast(1.08);
+}
+
+/* blue border accent */
+
+.photoAccent {
+  position: absolute;
+
+  width: min(380px, 100%);
+  aspect-ratio: 4 / 5;
+
+  border: 1px solid rgba(0, 140, 255, 0.6);
+
+  transform: translate(20px, 20px);
+
+  z-index: -1;
+}
+
+/* ================================
+   ABOUT CONTENT
+================================ */
+
+.aboutContent {
+  max-width: 700px;
+}
+
+.sectionLabel {
+  color: #008cff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 25px;
+}
+
+.aboutContent h2 {
+  font-size: clamp(36px, 4vw, 50px);
+
+  line-height: 1;
+  letter-spacing: -2px;
+  font-weight: 800;
+}
+
+.aboutContent h2 span {
+  color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #008cff
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.aboutDescription {
+  margin-top: 35px;
+
+  max-width: 600px;
+
+  color: #8994a5;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   ABOUT FIELDS
+================================ */
+
+.aboutFields {
+  margin-top: 45px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.aboutFields div {
+  display: flex;
+
+  gap: 15px;
+}
+
+.aboutFields span {
+  color: #008cff;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.aboutFields p {
+  color: #d4d8df;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  letter-spacing: 2px;
+}
+.sectionNumber {
+  position: absolute;
+
+  right: 3vw;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.sectionNumber span {
+  color: #008cff;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+.sectionNumber div {
+  width: 1px;
+  height: 70px;
+
+  background: linear-gradient(
+    #008cff,
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+.sectionNumber p {
+  font-size: 9px;
+
+  color: #667080;
+
+  letter-spacing: 4px;
+
+  writing-mode: vertical-rl;
+}
+
+@media (max-width: 900px) {
+  .about {
+    padding: 100px 25px;
+  }
+
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .aboutPhotoArea {
+    justify-content: flex-start;
+  }
+
+  .aboutPhotoWrapper {
+    width: min(330px, 85%);
+  }
+
+  .photoAccent {
+    width: min(330px, 85%);
+  }
+
+  .aboutContent h2 {
+    font-size: clamp(40px, 10vw, 65px);
+  }
+
+  .sectionNumber {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutFields {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
