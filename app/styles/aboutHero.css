@@ -1,0 +1,183 @@
+.aboutHero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(0, 102, 255, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      120deg,
+      #020409 0%,
+      #041020 50%,
+      #020409 100%
+    );
+}
+
+
+/* GLOW */
+
+.aboutHeroGlow {
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  right: -150px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(0, 102, 255, 0.15);
+
+  filter: blur(150px);
+}
+
+
+/* CONTENT */
+
+.aboutHeroContent {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+}
+
+.aboutHeroLabel {
+  margin-bottom: 22px;
+
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+}
+
+.aboutHeroContent h1 {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(60px, 8vw, 125px);
+
+  line-height: 0.85;
+
+  letter-spacing: -6px;
+
+  font-weight: 900;
+}
+
+.aboutHeroContent h1 span {
+  color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #00a3ff 50%,
+    #0057ff
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  padding-bottom: 15px;
+}
+
+
+/* SCROLL */
+
+/* SCROLL */
+
+.aboutHeroScroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 35px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #687384;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.aboutHeroScroll:hover {
+  color: white;
+}
+
+.aboutHeroScrollArrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  color: #008cff;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.aboutHeroScrollArrow svg {
+  width: 15px;
+  height: 15px;
+}
+
+.aboutHeroScroll:hover .aboutHeroScrollArrow {
+  border-color: #008cff;
+
+  background: rgba(0, 140, 255, 0.08);
+
+  transform: translateY(4px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .aboutHeroContent h1 {
+    font-size: clamp(60px, 18vw, 100px);
+
+    letter-spacing: -4px;
+  }
+
+  .aboutHeroLabel {
+    font-size: 8px;
+  }
+}

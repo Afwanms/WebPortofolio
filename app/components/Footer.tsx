@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footerContent">
-        <h2>Let's Connect</h2>
+        <h2>Let&apos;s Connect</h2>
 
         <p>Find me across the web</p>
 

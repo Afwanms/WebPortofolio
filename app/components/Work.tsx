@@ -2,16 +2,8 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-
-const works = [
-  {
-    id: 1,
-    company: "Company Name",
-    role: "AI Engineer Intern",
-    period: "Jun 2025 - Aug 2025",
-    image: "/work-01.jpg",
-  },
-];
+import { works } from "../data/work";
+import Link from "next/link";
 
 export default function Work() {
   const workRef = useRef<HTMLDivElement>(null);
@@ -39,7 +31,7 @@ export default function Work() {
       <div className="workHeader">
         <div>
           <p className="workLabel">WORK EXPERIENCE</p>
-          <h2>Where I've Worked</h2>
+          <h2>Where I&apos;ve Worked</h2>
         </div>
 
         <div className="workActions">
@@ -58,12 +50,16 @@ export default function Work() {
           >
             →
           </button>
+          <Link href="/work" className="workViewAll">
+            <span>VIEW ALL WORK</span>
+            <span className="workViewAllArrow">→</span>
+          </Link>
         </div>
       </div>
 
       <div className="workSlider" ref={workRef}>
         {works.map((work) => (
-          <article className="workCard" key={work.id}>
+          <Link href={work.href} className="workCard" key={work.id}>
             <Image
               src={work.image}
               alt={`${work.company} - ${work.role}`}
@@ -78,7 +74,7 @@ export default function Work() {
               <h3>{work.company}</h3>
               <p>{work.role}</p>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>

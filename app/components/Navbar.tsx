@@ -1,17 +1,42 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const navItems = [
+    { name: "HOME", href: "/" },
+    { name: "ABOUT", href: "/about" },
+    { name: "WORK", href: "/work" },
+    { name: "PROJECT", href: "/projects" },
+    { name: "EXPERIENCE", href: "/experience" },
+  ];
+
   return (
     <nav className="navbar">
-      <div className="brand">
+      <Link href="/" className="brand">
         AMS<span>.</span>
-      </div>
+      </Link>
 
       <div className="navLinks">
-        <a href="#home" className="active">
-          HOME
-        </a>
-        <a href="#work">WORK</a>
-        <a href="#contact">PROJECTS</a>
-        <a href="#about">EXPERIENCES</a>
+        {navItems.map((item) => {
+          const isActive =
+            item.href === "/"
+              ? pathname === "/"
+              : pathname.startsWith(item.href);
+
+          return (
+            <Link
+              href={item.href}
+              key={item.name}
+              className={isActive ? "active" : ""}
+            >
+              {item.name}
+            </Link>
+          );
+        })}
       </div>
     </nav>
   );

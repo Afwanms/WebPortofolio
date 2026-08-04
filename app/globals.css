@@ -4,6 +4,12 @@
 @import "./styles/work.css";
 @import "./styles/project.css";
 @import "./styles/experience.css";
+@import "./styles/skills.css";
+@import "./styles/aboutHero.css";
+@import "./styles/workList.css";
+@import "./styles/workHero.css";
+@import "./styles/projectHero.css";
+@import "./styles/projectGrid.css";
 @import "./styles/footer.css";
 
 * {
@@ -31,4 +37,8 @@ a {
   min-height: 100vh;
   background: #020409;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }

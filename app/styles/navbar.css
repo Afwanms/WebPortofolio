@@ -22,6 +22,9 @@
 }
 
 .brand {
+  color: white;
+  text-decoration: none;
+
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 3px;
@@ -39,13 +42,13 @@
 .navLinks a {
   position: relative;
 
+  color: #ffffff;
+
+  text-decoration: none;
+
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2px;
-
-  color: #7d8795;
-
-  transition: color 0.3s ease;
 }
 
 .navLinks a:hover,

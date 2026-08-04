@@ -1,3 +1,5 @@
+import { HiOutlineChevronDoubleDown } from "react-icons/hi";
+
 export default function Hero() {
   return (
     <section className="hero" id="home">
@@ -6,11 +8,10 @@ export default function Hero() {
       <div className="heroLine" />
 
       <div className="heroContent">
-        <p className="intro">Hello, I'M</p>
+        <p className="intro">I&apos;M</p>
 
         <h1 className="heroTitle">
-          <span>AFWAN</span>
-          <span className="gradientText">MAULANA.</span>
+          <span className="gradientText">AFWAN</span>
         </h1>
 
         <p className="welcome">
@@ -28,15 +29,11 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="pageIndex">
-        <span>01</span>
-        <div />
-        <p>HOME</p>
-      </div>
-
-      <a href="#about" className="scroll">
-        <span>SCROLL TO EXPLORE</span>
-        <div className="scrollArrow">↓</div>
+      <a href="#work" className="scroll">
+        SCROLL TO EXPLORE
+        <span className="scrollArrow">
+          <HiOutlineChevronDoubleDown />
+        </span>
       </a>
     </section>
   );

@@ -6,7 +6,7 @@
 
   display: flex;
   align-items: center;
-
+  justify-content: center;
   padding: 120px 8vw 80px;
 
   isolation: isolate;
@@ -99,9 +99,15 @@
 
 .heroContent {
   position: relative;
-  z-index: 10;
+  z-index: 5;
 
-  max-width: 850px;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
 }
 
 .intro {
@@ -109,7 +115,7 @@
 
   color: #8792a2;
 
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
 
   letter-spacing: 7px;
@@ -246,13 +252,16 @@
 .scroll {
   position: absolute;
 
-  left: 8vw;
-  bottom: 35px;
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%);
 
   display: flex;
+  flex-direction: column;
   align-items: center;
 
-  gap: 15px;
+  gap: 10px;
 
   color: #687384;
 
@@ -260,6 +269,10 @@
   font-weight: 600;
 
   letter-spacing: 3px;
+
+  text-decoration: none;
+
+  cursor: pointer;
 
   transition: color 0.3s ease;
 }
@@ -269,27 +282,36 @@
 }
 
 .scrollArrow {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   border: 1px solid rgba(255, 255, 255, 0.15);
-
   border-radius: 50%;
 
   color: #008cff;
 
-  transition: 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.scrollArrow svg {
+  width: 15px;
+  height: 15px;
 }
 
 .scroll:hover .scrollArrow {
   border-color: #008cff;
+
+  background: rgba(0, 140, 255, 0.08);
+
   transform: translateY(4px);
 }
-
 @media (max-width: 900px) {
   .hero {
     padding-left: 25px;

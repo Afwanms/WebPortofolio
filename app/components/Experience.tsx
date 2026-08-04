@@ -31,7 +31,7 @@ export default function Experience() {
       <div className="experienceHeader">
         <div>
           <p className="experienceLabel">ACTIVITIES & EXPERIENCES</p>
-          <h2>What I've Been Part Of</h2>
+          <h2>What I&apos;ve Been Part Of</h2>
         </div>
 
         <div className="experienceActions">

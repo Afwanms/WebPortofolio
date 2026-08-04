@@ -1,0 +1,305 @@
+.workHero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 7vw 100px;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(0, 102, 255, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      120deg,
+      #020409 0%,
+      #041020 50%,
+      #020409 100%
+    );
+}
+
+
+/* ================================
+   GRID BACKGROUND
+================================ */
+
+.workHeroGrid {
+  position: absolute;
+  inset: 0;
+
+  z-index: -3;
+
+  opacity: 0.08;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 30%,
+    black 70%,
+    transparent
+  );
+}
+
+
+/* ================================
+   GLOW
+================================ */
+
+.workHeroGlow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  right: -200px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(0, 102, 255, 0.2);
+
+  filter: blur(150px);
+
+  z-index: -2;
+}
+
+
+/* ================================
+   DIAGONAL LINE
+================================ */
+
+.workHeroLine {
+  position: absolute;
+
+  width: 500px;
+  height: 1px;
+
+  right: -100px;
+  top: 40%;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #008cff,
+    transparent
+  );
+
+  transform: rotate(-55deg);
+
+  opacity: 0.5;
+
+  z-index: -1;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.workHeroContent {
+  position: relative;
+
+  z-index: 5;
+
+  width: fit-content;
+
+  text-align: center;
+}
+
+.workHeroIndex {
+  margin-bottom: 22px;
+
+  color: #008cff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+}
+
+
+/* TITLE */
+
+.workHeroContent h1 {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(60px, 8vw, 125px);
+
+  line-height: 0.85;
+
+  letter-spacing: -6px;
+
+  font-weight: 900;
+}
+
+.workHeroContent h1 span {
+  color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #00a3ff 45%,
+    #0057ff 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  padding-bottom: 15px;
+}
+
+
+/* SUBTITLE */
+
+.workHeroSubtitle {
+  margin-top: 30px;
+
+  color: #8792a2;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+
+/* ================================
+   SCROLL
+================================ */
+
+.workHeroScroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #687384;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.workHeroScroll:hover {
+  color: white;
+}
+
+.workHeroScrollArrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  color: #008cff;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.workHeroScrollArrow svg {
+  width: 15px;
+  height: 15px;
+}
+
+.workHeroScroll:hover .workHeroScrollArrow {
+  border-color: #008cff;
+
+  background: rgba(0, 140, 255, 0.08);
+
+  transform: translateY(4px);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .workHero {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .workHeroContent h1 {
+    font-size: clamp(55px, 13vw, 100px);
+
+    letter-spacing: -4px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .workHeroContent h1 {
+    font-size: clamp(48px, 16vw, 75px);
+
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+  }
+
+  .workHeroSubtitle {
+    max-width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 8px;
+    line-height: 1.8;
+
+    letter-spacing: 3px;
+  }
+
+  .workHeroScroll {
+    width: 100%;
+  }
+}
