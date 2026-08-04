@@ -2,11 +2,16 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { works } from "../data/work";
 import Link from "next/link";
+import { works } from "../data/work";
 
 export default function Work() {
   const workRef = useRef<HTMLDivElement>(null);
+
+  // Latest → Oldest
+  const latestWorks = [...works].sort(
+    (a, b) => b.sortDate.localeCompare(a.sortDate)
+  );
 
   const scrollWork = (direction: "left" | "right") => {
     if (!workRef.current) return;
@@ -50,6 +55,7 @@ export default function Work() {
           >
             →
           </button>
+
           <Link href="/work" className="workViewAll">
             <span>VIEW ALL WORK</span>
             <span className="workViewAllArrow">→</span>
@@ -58,8 +64,12 @@ export default function Work() {
       </div>
 
       <div className="workSlider" ref={workRef}>
-        {works.map((work) => (
-          <Link href={work.href} className="workCard" key={work.id}>
+        {latestWorks.map((work) => (
+          <Link
+            href={work.href}
+            className="workCard"
+            key={work.id}
+          >
             <Image
               src={work.image}
               alt={`${work.company} - ${work.role}`}

@@ -11,10 +11,14 @@ const categories = ["ALL", "AI", "DATA", "IOT"];
 export default function ProjectGrid() {
   const [activeCategory, setActiveCategory] = useState("ALL");
 
+  const sortedProjects = [...projects].sort(
+    (a, b) => b.sortDate.localeCompare(a.sortDate)
+  );
+
   const filteredProjects =
     activeCategory === "ALL"
-      ? projects
-      : projects.filter(
+      ? sortedProjects
+      : sortedProjects.filter(
           (project) => project.category === activeCategory
         );
 
@@ -70,9 +74,12 @@ export default function ProjectGrid() {
             <div className="allProjectInfo">
               <div className="allProjectTitle">
                 <h3>{project.title}</h3>
-
                 <span>{project.category}</span>
               </div>
+
+              <p className="allProjectPeriod">
+                {project.period}
+              </p>
 
               <div className="allProjectTags">
                 {project.tags.map((tag, tagIndex) => (

@@ -8,8 +8,9 @@ import { projects } from "../data/project";
 export default function Project() {
   const projectsRef = useRef<HTMLDivElement>(null);
 
-  const highlightedProjects = projects.filter(
-    (project) => project.featured
+  // URUTKAN PROJECT TERBARU → TERLAMA
+  const latestProjects = [...projects].sort(
+    (a, b) => b.sortDate.localeCompare(a.sortDate)
   );
 
   const scrollProjects = (direction: "left" | "right") => {
@@ -63,7 +64,7 @@ export default function Project() {
       </div>
 
       <div className="projectsGrid" ref={projectsRef}>
-        {highlightedProjects.map((project, index) => (
+        {latestProjects.map((project, index) => (
           <Link
             href={project.href}
             className="projectCard"
@@ -89,9 +90,7 @@ export default function Project() {
 
               <div className="projectTags">
                 {project.tags.map((tag, tagIndex) => (
-                  <span
-                    key={`${project.id}-${tag}-${tagIndex}`}
-                  >
+                  <span key={`${project.id}-${tag}-${tagIndex}`}>
                     {tag}
                   </span>
                 ))}

@@ -3,10 +3,15 @@ import Link from "next/link";
 import { works } from "../data/work";
 
 export default function WorkList() {
+  // Latest → Oldest
+  const latestWorks = [...works].sort(
+    (a, b) => b.sortDate.localeCompare(a.sortDate)
+  );
+
   return (
     <section className="workPageSection" id="work-list">
       <div className="workPageList">
-        {works.map((work, index) => (
+        {latestWorks.map((work, index) => (
           <article
             className={`workPageItem ${
               index % 2 !== 0 ? "workPageItemReverse" : ""
@@ -51,4 +56,4 @@ export default function WorkList() {
       </div>
     </section>
   );
-}   
+}

@@ -316,6 +316,19 @@
   color: #a8b4c3;
 }
 
+.allProjectPeriod {
+  margin-top: 8px;
+
+  color: #5f6d7d;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
 
 /* ================================
    TABLET

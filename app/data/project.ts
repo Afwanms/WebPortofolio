@@ -1,19 +1,23 @@
 export const projects = [
   {
     id: 1,
-    title: "Project 01",
-    image: "/project-ai.jpg",
+    title: "Vibration Alert System",
+    image: "/project-01.jpg",
     href: "/projects/project-01",
-    category: "AI",
-    tags: ["AI", "LLM", "Python"],
+    category: "IOT",
+    tags: ["ESP8266", "ESP-NOW", "C/C++", "Arduino IDE"],
+    period: "Jun 2026 - Jul 2026",
+    sortDate: "2026-07",
   },
   {
     id: 2,
-    title: "Project 02",
-    image: "/project-data.jpg",
+    title: "NYC Taxi Streaming Pipeline",
+    image: "/project-02.jpg",
     href: "/projects/project-02",
     category: "DATA",
-    tags: ["Data", "Kafka", "PostgreSQL"],
+    tags: ["Docker", "Kafka", "PostgreSQL"],
+    period: "Jul 2026 - Aug 2026",
+    sortDate: "2026-08",
   },
   {
     id: 3,
@@ -22,6 +26,8 @@ export const projects = [
     href: "/projects/project-03",
     category: "IOT",
     tags: ["IoT", "ESP8266", "Sensor"],
+    period: "Jun 2026 - Jul 2026",
+    sortDate: "2026-07",
   },
   {
     id: 4,
@@ -30,5 +36,7 @@ export const projects = [
     href: "/projects/project-04",
     category: "DATA",
     tags: ["Python", "Analytics", "Power BI"],
+    period: "Jun 2026 - Jun 2026",
+    sortDate: "2026-06",
   },
 ];
