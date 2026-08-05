@@ -7,6 +7,8 @@ import {
   SiArduino,
   SiGit,
   SiGithub,
+  SiApacheairflow,
+  SiFastapi
 } from "react-icons/si";
 
 import { hardSkills, softSkills } from "../data/skills";
@@ -20,6 +22,8 @@ const skillIcons = {
   arduino: SiArduino,
   git: SiGit,
   github: SiGithub,
+  airflow: SiApacheairflow,
+  fastapi: SiFastapi,
 };
 
 export default function Skills() {

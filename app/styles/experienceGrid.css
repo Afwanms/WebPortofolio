@@ -1,0 +1,347 @@
+/* ================================
+   EXPERIENCE GRID
+================================ */
+
+.experienceGrid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  column-gap: 24px;
+  row-gap: 24px;
+}
+
+
+/* ================================
+   EXPERIENCE CARD
+================================ */
+
+.experienceCard {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  height: 500px;
+
+  display: block;
+
+  overflow: hidden;
+
+  background: #07111d;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+
+.experienceImage {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.experienceImage img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.5s ease;
+}
+
+.experienceCard:hover .experienceImage img {
+  transform: scale(1.05);
+}
+
+
+/* ================================
+   OVERLAY
+================================ */
+
+.experienceOverlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    to top,
+    rgba(2, 4, 9, 0.98) 0%,
+    rgba(2, 4, 9, 0.65) 30%,
+    rgba(2, 4, 9, 0.15) 65%,
+    transparent 100%
+  );
+
+  transition: background 0.4s ease;
+}
+
+.experienceCard:hover .experienceOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 75, 145, 0.95) 0%,
+    rgba(2, 15, 30, 0.6) 40%,
+    rgba(2, 4, 9, 0.1) 100%
+  );
+}
+
+
+/* ================================
+   NUMBER
+================================ */
+
+.experienceNumber {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 3;
+
+  padding: 7px 10px;
+
+  background: rgba(2, 4, 9, 0.75);
+
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* ================================
+   OPEN BUTTON
+================================ */
+
+.experienceOpen {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 3;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #008cff;
+  color: white;
+
+  font-size: 18px;
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.experienceCard:hover .experienceOpen {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ================================
+   INFORMATION
+================================ */
+
+.experienceInfo {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 3;
+}
+
+.experienceType {
+  margin: 0 0 10px;
+
+  color: #008cff;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.experienceInfo h3 {
+  margin: 0 0 8px;
+
+  color: white;
+
+  font-size: clamp(22px, 1.8vw, 28px);
+  font-weight: 800;
+
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.experienceRole {
+  margin: 0 0 12px;
+
+  color: #b1bac6;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+.experiencePeriod {
+  display: block;
+
+  color: #718093;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+/* ================================
+   HOVER
+================================ */
+
+.experienceCard:hover .experienceType {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.experienceCard:hover .experiencePeriod {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ================================
+   FILTER
+================================ */
+
+.experienceFilters {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 45px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experienceFilter {
+  position: relative;
+
+  padding: 0 0 15px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #667080;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.experienceFilter:hover {
+  color: #b8c2cf;
+}
+
+.experienceFilter.active {
+  color: #ffffff;
+}
+
+/* BLUE UNDERLINE */
+.experienceFilter::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 0;
+  height: 2px;
+
+  background: #008cff;
+
+  transition: width 0.3s ease;
+}
+
+.experienceFilter.active::after {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .experienceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experienceCard {
+    height: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .experienceSection {
+    padding: 90px 20px 120px;
+  }
+
+  .experienceHeader > span {
+    display: none;
+  }
+
+  .experienceFilters {
+    gap: 16px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .experienceFilters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .experienceCard {
+    height: 460px;
+  }
+
+  .experienceInfo {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+}

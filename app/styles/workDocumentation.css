@@ -1,0 +1,321 @@
+/* ================================
+   WORK DOCUMENTATION
+================================ */
+
+.workDocumentation {
+  position: relative;
+
+  width: 100%;
+
+  padding: 110px 7vw 120px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 30%,
+      rgba(0, 102, 255, 0.08),
+      transparent 30%
+    ),
+    #03070d;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.workDocumentationHeader {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 45px;
+
+  text-align: center;
+}
+
+.workDocumentationHeader > div:first-child > p {
+  margin: 0 0 18px;
+
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.workDocumentationHeader h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 4vw, 62px);
+  font-weight: 850;
+
+  line-height: 0.95;
+  letter-spacing: -3px;
+}
+
+
+/* ================================
+   ACTIONS
+================================ */
+
+.workDocumentationActions {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.workDocumentationActions button {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #008cff;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.workDocumentationActions button:first-child {
+  background: rgba(255, 255, 255, 0.1);
+
+  color: #a5afbb;
+}
+
+.workDocumentationActions button:hover {
+  background: #00a3ff;
+
+  color: #ffffff;
+
+  transform: scale(1.08);
+}
+
+
+/* ================================
+   IMAGE GRID
+================================ */
+
+.workDocumentationGrid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+
+.workDocumentationImage {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: #07111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.workDocumentationImage img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.4s ease;
+}
+
+.workDocumentationImage:hover img {
+  transform: scale(1.05);
+
+  filter: brightness(0.8);
+}
+
+
+/* ================================
+   IMAGE NUMBER
+================================ */
+
+.workDocumentationImage > span {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  z-index: 2;
+
+  padding: 7px 10px;
+
+  background: rgba(2, 4, 9, 0.78);
+
+  backdrop-filter: blur(8px);
+
+  color: #008cff;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* ================================
+   COUNTER
+================================ */
+
+.workDocumentationCounter {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 14px;
+
+  margin-top: 25px;
+}
+
+.workDocumentationCounter span {
+  color: #596676;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.workDocumentationCounter span:first-child {
+  color: #008cff;
+}
+
+.workDocumentationCounter div {
+  width: 70px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+  .workDocumentation {
+    padding: 100px 5vw 110px;
+  }
+
+  .workDocumentationGrid {
+    gap: 15px;
+  }
+
+  .workDocumentationHeader h2 {
+    font-size: clamp(38px, 6vw, 58px);
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+  .workDocumentation {
+    padding: 80px 20px 90px;
+  }
+
+  .workDocumentationHeader {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+  }
+
+  .workDocumentationHeader h2 {
+    font-size: clamp(36px, 11vw, 52px);
+
+    line-height: 0.95;
+    letter-spacing: -2px;
+  }
+
+  .workDocumentationActions {
+    align-self: flex-end;
+  }
+
+  .workDocumentationActions button {
+    width: 44px;
+    height: 44px;
+
+    font-size: 18px;
+  }
+
+  .workDocumentationGrid {
+    display: block;
+  }
+
+  .workDocumentationImage {
+    display: none;
+  }
+
+  .workDocumentationImage:first-child {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+  }
+
+  .workDocumentationImage > span {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .workDocumentationCounter {
+    justify-content: flex-start;
+
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,462 @@
+/* ================================
+   COMPANY OVERVIEW
+================================ */
+
+.workDetailOverview {
+  position: relative;
+
+  width: 100%;
+
+  padding: 150px 7vw 120px;
+
+  background:
+    radial-gradient(
+      circle at 15% 35%,
+      rgba(0, 102, 255, 0.1),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #020409 0%,
+      #03101d 100%
+    );
+}
+
+.workDetailOverviewGrid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: center;
+
+  gap: 7vw;
+}
+
+
+/* ================================
+   COMPANY IMAGE
+================================ */
+
+.workDetailImage {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #07111d;
+}
+
+.workDetailImage img {
+  object-fit: contain;
+
+  padding: 60px;
+
+  transition: transform 0.5s ease;
+}
+
+.workDetailImage:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ================================
+   COMPANY CONTENT
+================================ */
+
+.workDetailContent {
+  width: 100%;
+  min-width: 0;
+}
+
+.workDetailLabel {
+  margin-bottom: 18px;
+
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.workDetailContent h1 {
+  max-width: 700px;
+
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 4.5vw, 70px);
+  font-weight: 850;
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+}
+
+.workDetailRole {
+  margin: 0;
+
+  color: #8996a7;
+
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 400;
+
+  letter-spacing: 2px;
+}
+
+
+/* ================================
+   META INFORMATION
+================================ */
+
+.workDetailMeta {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+  margin-top: 45px;
+  padding: 25px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.workDetailMeta div {
+  min-width: 0;
+}
+
+.workDetailMeta span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #526070;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.workDetailMeta p {
+  margin: 0;
+
+  color: #d6dce4;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.7px;
+}
+
+
+/* ================================
+   ABOUT COMPANY
+================================ */
+
+.workDetailAbout {
+  margin-top: 40px;
+}
+
+.workDetailSectionLabel {
+  margin: 0 0 15px;
+
+  color: #008cff;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.workDetailDescription {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #98a3b2;
+
+  font-size: clamp(14px, 1.2vw, 17px);
+
+  line-height: 1.8;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* ================================
+   RESPONSIBILITIES
+================================ */
+
+.workDetailResponsibilities {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(250px, 0.7fr) minmax(0, 1.3fr);
+
+  gap: 8vw;
+
+  padding: 120px 7vw 130px;
+
+  background: #03070d;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* LEFT */
+
+.workDetailResponsibilitiesHeader p {
+  margin: 0 0 18px;
+
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.workDetailResponsibilitiesHeader h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 4vw, 65px);
+  font-weight: 850;
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+}
+
+
+/* ================================
+   RESPONSIBILITY LIST
+================================ */
+
+.workDetailResponsibilitiesList {
+  width: 100%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.workDetailResponsibility {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr);
+
+  gap: 25px;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.workDetailResponsibilityNumber {
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.workDetailResponsibility p {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: #a6b0bd;
+
+  font-size: clamp(14px, 1.2vw, 17px);
+
+  line-height: 1.7;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.workDetailResponsibility:hover p {
+  color: #ffffff;
+
+  transform: translateX(5px);
+}
+
+
+/* ================================
+   BACK TO WORK
+================================ */
+
+.workDetailBack {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 60px 7vw 100px;
+
+  background: #03070d;
+}
+
+.workDetailBack a {
+  min-width: 190px;
+  height: 48px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.workDetailBack a span {
+  color: #008cff;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.workDetailBack a:hover {
+  border-color: #008cff;
+
+  background: rgba(0, 140, 255, 0.06);
+
+  transform: translateY(-3px);
+}
+
+.workDetailBack a:hover span {
+  transform: translateX(-4px);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+  .workDetailOverview {
+    padding: 130px 5vw 100px;
+  }
+
+  .workDetailOverviewGrid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+    gap: 5vw;
+  }
+
+  .workDetailImage img {
+    padding: 40px;
+  }
+
+  .workDetailResponsibilities {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding: 100px 5vw 110px;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+  .workDetailOverview {
+    padding: 120px 20px 80px;
+  }
+
+  .workDetailOverviewGrid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .workDetailImage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .workDetailImage img {
+    padding: 40px;
+  }
+
+  .workDetailContent h1 {
+    font-size: clamp(36px, 11vw, 55px);
+
+    letter-spacing: -2px;
+  }
+
+  .workDetailMeta {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .workDetailMeta div:not(:last-child) {
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .workDetailResponsibilities {
+    padding: 80px 20px 100px;
+
+    gap: 45px;
+  }
+
+  .workDetailResponsibilitiesHeader h2 {
+    font-size: clamp(36px, 11vw, 52px);
+
+    letter-spacing: -2px;
+  }
+
+  .workDetailResponsibility {
+    grid-template-columns: 35px minmax(0, 1fr);
+
+    gap: 15px;
+
+    padding: 25px 0;
+  }
+
+  .workDetailBack {
+    padding: 40px 20px 80px;
+  }
+
+  .workDetailBack a {
+    width: 100%;
+  }
+}

@@ -19,14 +19,6 @@ export default function Hero() {
           <br />
           PORTFOLIO
         </p>
-
-        <div className="fields">
-          <span>AI</span>
-          <i />
-          <span>DATA</span>
-          <i />
-          <span>IoT</span>
-        </div>
       </div>
 
       <a href="#work" className="scroll">

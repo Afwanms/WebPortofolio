@@ -8,8 +8,12 @@
 @import "./styles/aboutHero.css";
 @import "./styles/workList.css";
 @import "./styles/workHero.css";
+@import "./styles/workDetail.css";
+@import "./styles/workDocumentation.css";
 @import "./styles/projectHero.css";
 @import "./styles/projectGrid.css";
+@import "./styles/experienceHero.css";
+@import "./styles/experienceGrid.css";
 @import "./styles/footer.css";
 
 * {

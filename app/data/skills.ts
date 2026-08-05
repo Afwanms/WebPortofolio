@@ -39,6 +39,16 @@ export const hardSkills = [
     name: "GitHub",
     icon: "github",
   },
+  {
+    id: 9,
+    name: "Airflow",
+    icon: "airflow",
+  },
+  {
+    id: 10,
+    name: "FastAPI",
+    icon: "fastapi",
+  }
 ];
 
 export const softSkills = [

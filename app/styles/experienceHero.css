@@ -1,5 +1,9 @@
-.aboutHero {
-   position: relative;
+/* ================================
+   EXPERIENCE HERO
+================================ */
+
+.experienceHero {
+  position: relative;
 
   width: 100%;
   min-height: 100vh;
@@ -27,7 +31,7 @@
     );
 }
 
-.aboutHeroGrid {
+.experienceHeroGrid {
   position: absolute;
   inset: 0;
 
@@ -49,7 +53,7 @@
   background-size: 70px 70px;
 }
 
-.aboutHeroGlow {
+.experienceHeroGlow {
   position: absolute;
 
   width: 700px;
@@ -68,7 +72,8 @@
 
   z-index: -2;
 }
-.aboutHeroLine {
+
+.experienceHeroLine {
   position: absolute;
 
   width: 500px;
@@ -90,27 +95,30 @@
 
   z-index: -1;
 }
+
+
 /* CONTENT */
 
-.aboutHeroContent {
+.experienceHeroContent {
   position: relative;
-  z-index: 2;
+
+  z-index: 5;
 
   text-align: center;
 }
 
-.aboutHeroLabel {
+.experienceHeroLabel {
   margin-bottom: 22px;
 
   color: #008cff;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 5px;
 }
 
-.aboutHeroContent h1 {
+.experienceHeroContent h1 {
   display: flex;
   flex-direction: column;
 
@@ -118,8 +126,7 @@
 
   color: white;
 
-  font-size: clamp(60px, 8vw, 125px);
-
+  font-size: clamp(55px, 8vw, 120px);
   line-height: 0.85;
 
   letter-spacing: -6px;
@@ -127,13 +134,13 @@
   font-weight: 900;
 }
 
-.aboutHeroContent h1 span {
+.experienceHeroContent h1 span {
   color: transparent;
 
   background: linear-gradient(
     90deg,
     #ffffff,
-    #00a3ff 50%,
+    #00a3ff 45%,
     #0057ff
   );
 
@@ -142,9 +149,22 @@
 
   padding-bottom: 15px;
 }
+
+.experienceHeroSubtitle {
+  margin-top: 30px;
+
+  color: #8792a2;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+
 /* SCROLL */
 
-.aboutHeroScroll {
+.experienceHeroScroll {
   position: absolute;
 
   left: 50%;
@@ -166,22 +186,19 @@
   letter-spacing: 3px;
 
   text-decoration: none;
-  cursor: pointer;
-
-  transition: color 0.3s ease;
 }
 
-.aboutHeroScroll:hover {
+.experienceHeroScroll:hover {
   color: white;
 }
 
-.aboutHeroScrollArrow {
+.experienceHeroScrollArrow {
   width: 34px;
   height: 34px;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
@@ -190,34 +207,20 @@
 
   transition:
     border-color 0.3s ease,
-    transform 0.3s ease,
-    background 0.3s ease;
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
-.aboutHeroScrollArrow svg {
+.experienceHeroScrollArrow svg {
   width: 15px;
   height: 15px;
 }
 
-.aboutHeroScroll:hover .aboutHeroScrollArrow {
+.experienceHeroScroll:hover
+.experienceHeroScrollArrow {
   border-color: #008cff;
 
   background: rgba(0, 140, 255, 0.08);
 
   transform: translateY(4px);
-}
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-  .aboutHeroContent h1 {
-    font-size: clamp(60px, 18vw, 100px);
-
-    letter-spacing: -4px;
-  }
-
-  .aboutHeroLabel {
-    font-size: 8px;
-  }
 }
