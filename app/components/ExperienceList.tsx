@@ -31,19 +31,19 @@ export default function ExperienceGrid() {
 
   return (
     <section
-      className="experienceSection"
+      className="experiencePageSection"
       id="experience-list"
     >
       {/* FILTER */}
-      <div className="experienceFilters">
+      <div className="experiencePageFilters">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
             className={
               activeCategory === category
-                ? "experienceFilter active"
-                : "experienceFilter"
+                ? "experiencePageFilter active"
+                : "experiencePageFilter"
             }
           >
             {category}
@@ -52,15 +52,15 @@ export default function ExperienceGrid() {
       </div>
 
       {/* GRID */}
-      <div className="experienceGrid">
+      <div className="experiencePageGrid">
         {filteredExperiences.map(
           (experience, index) => (
             <Link
               href={experience.href}
-              className="experienceCard"
+              className="experiencePageCard"
               key={experience.id}
             >
-              <div className="experienceImage">
+              <div className="experiencePageImage">
                 <Image
                   src={experience.image}
                   alt={experience.title}
@@ -72,28 +72,24 @@ export default function ExperienceGrid() {
                   "
                 />
 
-                <div className="experienceOverlay" />
+                <div className="experiencePageOverlay" />
 
-                <span className="experienceNumber">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <span className="experienceOpen">
+                <span className="experiencePageOpen">
                   ↗
                 </span>
 
-                <div className="experienceInfo">
-                  <p className="experienceType">
+                <div className="experiencePageInfo">
+                  <p className="experiencePageType">
                     {experience.type}
                   </p>
 
                   <h3>{experience.title}</h3>
 
-                  <p className="experienceRole">
+                  <p className="experiencePageRole">
                     {experience.role}
                   </p>
 
-                  <span className="experiencePeriod">
+                  <span className="experiencePagePeriod">
                     {experience.period}
                   </span>
                 </div>

@@ -5,6 +5,8 @@ export const experiences = [
     type: "ORGANIZATION",
     title: "Organization Name",
     role: "Position / Role",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
 
     image: "/experience-01.jpg",
     href: "/experience/experience-01",

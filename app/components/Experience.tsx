@@ -73,13 +73,13 @@ export default function Experience() {
               </span>
 
               <span className="experienceYear">
-                {experience.year}
+                {experience.period}
               </span>
             </div>
 
             <div className="experienceCardContent">
               <p className="experienceCategory">
-                {experience.category}
+                {experience.type}
               </p>
 
               <h3>{experience.title}</h3>
