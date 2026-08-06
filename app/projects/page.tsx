@@ -1,11 +1,11 @@
 import ProjectHero from "../components/ProjectHero";
-import ProjectGrid from "../components/ProjectGrid";
+import ProjectList from "../components/ProjectList";
 
 export default function ProjectsPage() {
   return (
     <main>
       <ProjectHero />
-      <ProjectGrid />
+      <ProjectList />
     </main>
   );
 } 

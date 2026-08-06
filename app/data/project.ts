@@ -1,42 +1,44 @@
 export const projects = [
   {
     id: 1,
+    slug: "vibration-alert-system",
     title: "Vibration Alert System",
     image: "/project-01.jpg",
-    href: "/projects/project-01",
     category: "IOT",
-    tags: ["ESP8266", "ESP-NOW", "C/C++", "Arduino IDE"],
+
+    tags: [
+      "ESP8266",
+      "ESP-NOW",
+      "C/C++",
+      "Arduino IDE",
+    ],
+
     period: "Jun 2026 - Jul 2026",
     sortDate: "2026-07",
-  },
-  {
-    id: 2,
-    title: "NYC Taxi Streaming Pipeline",
-    image: "/project-02.jpg",
-    href: "/projects/project-02",
-    category: "DATA",
-    tags: ["Docker", "Kafka", "PostgreSQL"],
-    period: "Jul 2026 - Aug 2026",
-    sortDate: "2026-08",
-  },
-  {
-    id: 3,
-    title: "Project 03",
-    image: "/project-iot.jpg",
-    href: "/projects/project-03",
-    category: "IOT",
-    tags: ["IoT", "ESP8266", "Sensor"],
-    period: "Jun 2026 - Jul 2026",
-    sortDate: "2026-07",
-  },
-  {
-    id: 4,
-    title: "Project 04",
-    image: "/project-04.jpg",
-    href: "/projects/project-04",
-    category: "DATA",
-    tags: ["Python", "Analytics", "Power BI"],
-    period: "Jun 2026 - Jun 2026",
-    sortDate: "2026-06",
+
+    description:
+      "A wireless vibration-based alert system designed to provide discreet physical notifications through connected ESP8266 devices.",
+
+    implementation:
+      "Built using ESP8266 devices communicating through ESP-NOW, integrating wireless communication logic with vibration-based feedback for real-time alerts.",
+
+    concepts: [
+      "IoT",
+      "Wireless Communication",
+      "Embedded Systems",
+      "Device-to-Device Communication",
+    ],
+
+    impact:
+      "Developed a functional prototype capable of delivering wireless vibration alerts through direct device-to-device communication.",
+
+    github:
+      "https://github.com/USERNAME/REPOSITORY",
+
+    documentation: [
+      "/project-photo/vibration/01.jpg",
+      "/project-photo/vibration/02.jpg",
+      "/project-photo/vibration/03.jpg",
+    ],
   },
 ];

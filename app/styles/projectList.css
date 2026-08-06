@@ -2,7 +2,7 @@
    ALL PROJECTS
 ================================ */
 
-.allProjectsSection {
+.ProjectsPageSection {
   position: relative;
 
   width: 100%;
@@ -23,7 +23,7 @@
    HEADER
 ================================ */
 
-.allProjectsHeader {
+.ProjectsPageHeader {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -31,7 +31,7 @@
   margin-bottom: 45px;
 }
 
-.allProjectsLabel {
+.ProjectsPageLabel {
   margin-bottom: 8px;
 
   color: #008cff;
@@ -42,7 +42,7 @@
   letter-spacing: 4px;
 }
 
-.allProjectsHeader h2 {
+.ProjectsPageHeader h2 {
   color: white;
 
   font-size: clamp(22px, 2vw, 28px);
@@ -51,7 +51,7 @@
   letter-spacing: -1px;
 }
 
-.allProjectsIndex {
+.ProjectsPageIndex {
   color: #536273;
 
   font-size: 9px;
@@ -65,7 +65,7 @@
    FILTER
 ================================ */
 
-.projectFilters {
+.ProjectsPageFilters {
   display: flex;
   align-items: center;
 
@@ -76,7 +76,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.projectFilter {
+.ProjectsPageFilter {
   position: relative;
 
   padding: 0 0 15px;
@@ -97,11 +97,11 @@
   transition: color 0.3s ease;
 }
 
-.projectFilter:hover {
+.ProjectsPageFilter:hover {
   color: white;
 }
 
-.projectFilter::after {
+.ProjectsPageFilter::after {
   content: "";
 
   position: absolute;
@@ -117,11 +117,11 @@
   transition: width 0.3s ease;
 }
 
-.projectFilter.active {
+.ProjectsPageFilter.active {
   color: white;
 }
 
-.projectFilter.active::after {
+.ProjectsPageFilter.active::after {
   width: 100%;
 }
 
@@ -130,7 +130,7 @@
    GRID
 ================================ */
 
-.allProjectsGrid {
+.ProjectsPageGrid {
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
@@ -143,7 +143,7 @@
    CARD
 ================================ */
 
-.allProjectCard {
+.ProjectsPageCard {
   display: block;
 
   color: inherit;
@@ -154,7 +154,7 @@
 
 /* IMAGE */
 
-.allProjectImage {
+.ProjectsPageImage {
   position: relative;
 
   width: 100%;
@@ -165,7 +165,7 @@
   background: #07111d;
 }
 
-.allProjectImage img {
+.ProjectsPageImage img {
   object-fit: cover;
 
   transition:
@@ -173,7 +173,7 @@
     filter 0.5s ease;
 }
 
-.allProjectCard:hover .allProjectImage img {
+.ProjectsPageCard:hover .ProjectsPageImage img {
   transform: scale(1.05);
 
   filter: brightness(0.7);
@@ -182,7 +182,7 @@
 
 /* NUMBER */
 
-.allProjectNumber {
+.ProjectsPageNumber {
   position: absolute;
 
   top: 18px;
@@ -207,7 +207,7 @@
 
 /* OPEN */
 
-.allProjectOpen {
+.ProjectsPageOpen {
   position: absolute;
 
   top: 18px;
@@ -236,7 +236,7 @@
     transform 0.3s ease;
 }
 
-.allProjectCard:hover .allProjectOpen {
+.ProjectsPageCard:hover .ProjectsPageOpen {
   opacity: 1;
 
   transform: translateY(0);
@@ -247,11 +247,11 @@
    INFO
 ================================ */
 
-.allProjectInfo {
+.ProjectsPageInfo {
   padding: 20px 2px 0;
 }
 
-.allProjectTitle {
+.ProjectsPageTitle {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -259,7 +259,7 @@
   gap: 20px;
 }
 
-.allProjectTitle h3 {
+.ProjectsPageTitle h3 {
   color: white;
 
   font-size: 20px;
@@ -268,7 +268,7 @@
   letter-spacing: -0.5px;
 }
 
-.allProjectTitle > span {
+.ProjectsPageTitle > span {
   padding-top: 4px;
 
   color: #008cff;
@@ -284,7 +284,7 @@
    TAGS
 ================================ */
 
-.allProjectTags {
+.ProjectsPageTags {
   margin-top: 15px;
 
   display: flex;
@@ -293,7 +293,7 @@
   gap: 7px;
 }
 
-.allProjectTags span {
+.ProjectsPageTags span {
   padding: 6px 9px;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -310,13 +310,13 @@
     color 0.3s ease;
 }
 
-.allProjectCard:hover .allProjectTags span {
+.ProjectsPageCard:hover .ProjectsPageTags span {
   border-color: rgba(0, 140, 255, 0.35);
 
   color: #a8b4c3;
 }
 
-.allProjectPeriod {
+.ProjectsPagePeriod {
   margin-top: 8px;
 
   color: #5f6d7d;
@@ -335,11 +335,11 @@
 ================================ */
 
 @media (max-width: 1000px) {
-  .allProjectsGrid {
+  .ProjectsPageGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .allProjectImage {
+  .ProjectsPageImage {
     height: 370px;
   }
 }
@@ -350,21 +350,21 @@
 ================================ */
 
 @media (max-width: 600px) {
-  .allProjectsSection {
+  .ProjectsPageSection {
     padding: 80px 20px;
   }
 
-  .allProjectsHeader {
+  .ProjectsPageHeader {
     align-items: flex-start;
 
     gap: 20px;
   }
 
-  .allProjectsIndex {
+  .ProjectsPageIndex {
     display: none;
   }
 
-  .projectFilters {
+  .ProjectsPageFilters {
     gap: 20px;
 
     overflow-x: auto;
@@ -372,17 +372,17 @@
     scrollbar-width: none;
   }
 
-  .projectFilters::-webkit-scrollbar {
+  .ProjectsPageFilters::-webkit-scrollbar {
     display: none;
   }
 
-  .allProjectsGrid {
+  .ProjectsPageGrid {
     grid-template-columns: 1fr;
 
     gap: 50px;
   }
 
-  .allProjectImage {
+  .ProjectsPageImage {
     height: 350px;
   }
 }

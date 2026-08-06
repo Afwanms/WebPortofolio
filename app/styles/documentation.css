@@ -1,8 +1,4 @@
-/* ================================
-   WORK DOCUMENTATION
-================================ */
-
-.workDocumentation {
+.documentation {
   position: relative;
 
   width: 100%;
@@ -27,7 +23,7 @@
    HEADER
 ================================ */
 
-.workDocumentationHeader {
+.documentationHeader {
   position: relative;
 
   width: 100%;
@@ -41,8 +37,8 @@
   text-align: center;
 }
 
-.workDocumentationHeader > div:first-child > p {
-  margin: 0 0 18px;
+.documentationTitle {
+  margin: 0;
 
   color: #008cff;
 
@@ -52,24 +48,11 @@
   letter-spacing: 4px;
 }
 
-.workDocumentationHeader h2 {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: clamp(38px, 4vw, 62px);
-  font-weight: 850;
-
-  line-height: 0.95;
-  letter-spacing: -3px;
-}
-
-
 /* ================================
    ACTIONS
 ================================ */
 
-.workDocumentationActions {
+.documentationActions {
   position: absolute;
 
   right: 0;
@@ -81,7 +64,7 @@
   gap: 10px;
 }
 
-.workDocumentationActions button {
+.documentationActions button {
   width: 48px;
   height: 48px;
 
@@ -107,13 +90,13 @@
     transform 0.3s ease;
 }
 
-.workDocumentationActions button:first-child {
+.documentationActions button:first-child {
   background: rgba(255, 255, 255, 0.1);
 
   color: #a5afbb;
 }
 
-.workDocumentationActions button:hover {
+.documentationActions button:hover {
   background: #00a3ff;
 
   color: #ffffff;
@@ -126,7 +109,7 @@
    IMAGE GRID
 ================================ */
 
-.workDocumentationGrid {
+.documentationGrid {
   width: 100%;
 
   display: grid;
@@ -140,7 +123,7 @@
    IMAGE
 ================================ */
 
-.workDocumentationImage {
+.documentationImage {
   position: relative;
 
   width: 100%;
@@ -155,7 +138,7 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.workDocumentationImage img {
+.documentationImage img {
   width: 100%;
   height: 100%;
 
@@ -166,7 +149,7 @@
     filter 0.4s ease;
 }
 
-.workDocumentationImage:hover img {
+.documentationImage:hover img {
   transform: scale(1.05);
 
   filter: brightness(0.8);
@@ -177,7 +160,7 @@
    IMAGE NUMBER
 ================================ */
 
-.workDocumentationImage > span {
+.documentationImage > span {
   position: absolute;
 
   left: 18px;
@@ -204,7 +187,7 @@
    COUNTER
 ================================ */
 
-.workDocumentationCounter {
+.documentationCounter {
   width: 100%;
 
   display: flex;
@@ -216,7 +199,7 @@
   margin-top: 25px;
 }
 
-.workDocumentationCounter span {
+.documentationCounter span {
   color: #596676;
 
   font-size: 8px;
@@ -225,11 +208,11 @@
   letter-spacing: 2px;
 }
 
-.workDocumentationCounter span:first-child {
+.documentationCounter span:first-child {
   color: #008cff;
 }
 
-.workDocumentationCounter div {
+.documentationCounter div {
   width: 70px;
   height: 1px;
 
@@ -242,16 +225,12 @@
 ================================ */
 
 @media (max-width: 1000px) {
-  .workDocumentation {
+  .documentation {
     padding: 100px 5vw 110px;
   }
 
-  .workDocumentationGrid {
+  .documentationGrid {
     gap: 15px;
-  }
-
-  .workDocumentationHeader h2 {
-    font-size: clamp(38px, 6vw, 58px);
   }
 }
 
@@ -261,11 +240,11 @@
 ================================ */
 
 @media (max-width: 700px) {
-  .workDocumentation {
+  .documentation {
     padding: 80px 20px 90px;
   }
 
-  .workDocumentationHeader {
+  .documentationHeader {
     flex-direction: column;
     align-items: flex-start;
 
@@ -274,33 +253,26 @@
     margin-bottom: 30px;
   }
 
-  .workDocumentationHeader h2 {
-    font-size: clamp(36px, 11vw, 52px);
-
-    line-height: 0.95;
-    letter-spacing: -2px;
-  }
-
-  .workDocumentationActions {
+  .documentationActions {
     align-self: flex-end;
   }
 
-  .workDocumentationActions button {
+  .documentationActions button {
     width: 44px;
     height: 44px;
 
     font-size: 18px;
   }
 
-  .workDocumentationGrid {
+  .documentationGrid {
     display: block;
   }
 
-  .workDocumentationImage {
+  .documentationImage {
     display: none;
   }
 
-  .workDocumentationImage:first-child {
+  .documentationImage:first-child {
     display: block;
 
     width: 100%;
@@ -308,12 +280,12 @@
     aspect-ratio: 4 / 3;
   }
 
-  .workDocumentationImage > span {
+  .documentationImage > span {
     left: 15px;
     bottom: 15px;
   }
 
-  .workDocumentationCounter {
+  .documentationCounter {
     justify-content: flex-start;
 
     margin-top: 20px;

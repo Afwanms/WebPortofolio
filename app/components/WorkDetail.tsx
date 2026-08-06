@@ -1,31 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
-import WorkDocumentation from "./WorkDocumentation";
+import Documentation from "./Documentation";
 
 type Work = {
-id: number;
-slug: string;
+    id: number;
+    slug: string;
 
-company: string;
-role: string;
+    company: string;
+    role: string;
 
-period: string;
-sortDate: string;
+    period: string;
+    sortDate: string;
 
-location: string;
-type: string;
+    location: string;
+    type: string;
 
-image: string;
+    image: string;
 
-description: string;
+    description: string;
 
-responsibilities: string[];
+    responsibilities: string[];
 
-documentation?: string[];
+    documentation?: string[];
 };
 
 type WorkDetailProps = {
-work: Work;
+    work: Work;
 };
 
 export default function WorkDetail({
@@ -84,8 +84,6 @@ return (
     <section className="workDetailResponsibilities">
         <div className="workDetailResponsibilitiesHeader">
         <h2>
-            My
-            <br />
             Responsibilities
         </h2>
         </div>
@@ -107,9 +105,9 @@ return (
         )}
         </div>
     </section>
-    <WorkDocumentation
+    <Documentation
         images={work.documentation ?? []}
-        company={work.company}
+        title={work.company}
     />
     <div className="workDetailBack">
         <Link href="/work">

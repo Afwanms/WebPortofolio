@@ -1,0 +1,534 @@
+/* ================================
+   PROJECT DETAIL
+================================ */
+
+.projectDetail {
+  position: relative;
+
+  width: 100%;
+
+  padding: 150px 7vw 120px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(0, 102, 255, 0.1),
+      transparent 30%
+    ),
+    #020409;
+}
+
+
+/* ================================
+   MAIN GRID
+================================ */
+
+.projectDetailGrid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 7vw;
+}
+
+
+/* ================================
+   LEFT
+================================ */
+
+.projectDetailLeft {
+  min-width: 0;
+}
+
+.projectDetailLabel {
+  margin: 0 0 22px;
+
+  color: #008cff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.projectDetailLeft h1 {
+  max-width: 700px;
+
+  margin: 0 0 45px;
+
+  color: #ffffff;
+
+  font-size: clamp(50px, 6vw, 92px);
+  font-weight: 900;
+
+  line-height: 0.88;
+
+  letter-spacing: -5px;
+}
+
+
+/* ================================
+   MAIN IMAGE
+================================ */
+
+.projectDetailImage {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: #07111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.projectDetailImage img {
+  object-fit: cover;
+
+  transition:
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.projectDetailImage:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ================================
+   RIGHT
+================================ */
+
+.projectDetailRight {
+  width: 100%;
+
+  padding-top: 45px;
+}
+
+
+/* ================================
+   INFORMATION BLOCK
+================================ */
+
+.projectDetailBlock {
+  padding: 30px 0;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+.projectDetailBlock:first-child {
+  padding-top: 0;
+}
+
+.projectDetailBlockLabel {
+  margin: 0 0 15px;
+
+  color: #008cff;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.projectDetailDescription {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #9ca7b5;
+
+  font-size: clamp(14px, 1.15vw, 17px);
+
+  line-height: 1.8;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* ================================
+   META
+================================ */
+
+.projectDetailMeta {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+
+  padding: 28px 0;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+.projectDetailMeta span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #536273;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.projectDetailMeta p {
+  margin: 0;
+
+  color: #d9dee5;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ================================
+   TAGS / CONCEPTS
+================================ */
+
+.projectDetailTags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.projectDetailTags span {
+  padding: 10px 13px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  color: #8793a2;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.projectDetailTags span:hover {
+  color: #ffffff;
+
+  border-color:
+    rgba(0, 140, 255, 0.55);
+
+  background:
+    rgba(0, 140, 255, 0.06);
+}
+
+
+/* ================================
+   GITHUB BUTTON
+================================ */
+
+.projectDetailGithub {
+  width: fit-content;
+
+  min-width: 190px;
+  height: 48px;
+
+  margin-top: 35px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  border: 1px solid #008cff;
+
+  background:
+    rgba(0, 140, 255, 0.05);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.projectDetailGithub span:last-child {
+  color: #008cff;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.projectDetailGithub:hover {
+  background:
+    rgba(0, 140, 255, 0.12);
+
+  transform: translateY(-3px);
+}
+
+.projectDetailGithub:hover span:last-child {
+  transform: translate(3px, -3px);
+}
+
+
+/* ================================
+   PROJECT IMPACT
+================================ */
+
+.projectImpact {
+  width: 100%;
+  min-height: 320px;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  align-items: center;
+
+  padding: 70px 7vw;
+
+  background: #03070d;
+}
+
+.projectImpact h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(48px, 5vw, 78px);
+  font-weight: 800;
+
+  line-height: 0.95;
+  letter-spacing: -4px;
+}
+
+.projectImpactContent {
+  display: flex;
+  align-items: center;
+
+  min-height: 125px;
+
+  padding-left: 55px;
+
+  border-left: 2px solid #008cff;
+}
+
+.projectImpactContent p {
+  margin: 0;
+
+  color: #b5bfcc;
+
+  font-size: clamp(17px, 1.5vw, 24px);
+
+  line-height: 1.8;
+}
+
+
+/* ================================
+   BOTTOM NAVIGATION
+================================ */
+
+.projectDetailBack {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 65px 7vw 100px;
+
+  background: #03070d;
+}
+
+.projectDetailBack a {
+  min-width: 190px;
+  height: 48px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.projectDetailBack a span {
+  color: #008cff;
+
+  font-size: 17px;
+}
+
+.projectDetailBack a:hover {
+  border-color: #008cff;
+
+  background:
+    rgba(0, 140, 255, 0.06);
+
+  transform: translateY(-3px);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+  .projectDetail {
+    padding: 130px 5vw 100px;
+  }
+
+  .projectDetailGrid {
+    gap: 5vw;
+  }
+
+  .projectDetailLeft h1 {
+    font-size:
+      clamp(45px, 7vw, 75px);
+
+    letter-spacing: -4px;
+  }
+
+  .projectImpact {
+    padding: 100px 5vw;
+
+    gap: 6vw;
+  }
+
+  .projectDetailBack {
+    padding:
+      60px 5vw 90px;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 750px) {
+  .projectDetail {
+    padding:
+      120px 20px 80px;
+  }
+
+  .projectDetailGrid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .projectDetailLeft h1 {
+    margin-bottom: 30px;
+
+    font-size:
+      clamp(45px, 14vw, 70px);
+
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+  }
+
+  .projectDetailImage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .projectDetailRight {
+    padding-top: 0;
+  }
+
+  .projectDetailMeta {
+    gap: 20px;
+  }
+
+  .projectDetailGithub {
+    width: 100%;
+  }
+
+
+  /* IMPACT */
+
+  .projectImpact {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding:
+      80px 20px 90px;
+  }
+
+  .projectImpactHeader h2 {
+    font-size:
+      clamp(36px, 11vw, 52px);
+
+    letter-spacing: -2px;
+  }
+
+  .projectImpactContent {
+    padding:
+      5px 0 5px 22px;
+  }
+
+  .projectImpactContent p {
+    font-size: 16px;
+  }
+
+
+  /* NAVIGATION */
+
+  .projectDetailBack {
+    flex-direction: column;
+
+    padding:
+      50px 20px 80px;
+  }
+
+  .projectDetailBack a {
+    width: 100%;
+  }
+}

@@ -7,12 +7,12 @@ import { experiences } from "../data/experience";
 
 const categories = [
   "ALL",
-  "ORGANIZATION",
-  "COMPETITION",
-  "PROGRAM",
+  "CERTIFICATION",
+  "AWARD",
+  "COMMUNITY SERVICE",
 ];
 
-export default function ExperienceGrid() {
+export default function ExperienceList() {
   const [activeCategory, setActiveCategory] =
     useState("ALL");
 
@@ -56,7 +56,7 @@ export default function ExperienceGrid() {
         {filteredExperiences.map(
           (experience, index) => (
             <Link
-              href={experience.href}
+              href={`/experience/${experience.slug}`}
               className="experiencePageCard"
               key={experience.id}
             >

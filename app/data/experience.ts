@@ -1,59 +1,97 @@
 export const experiences = [
   {
     id: 1,
+    slug: "example-certification",
 
-    type: "ORGANIZATION",
-    title: "Organization Name",
-    role: "Position / Role",
+    title: "Example Certification",
+    type: "CERTIFICATION",
+
+    organization: "Issuing Organization",
+
+    period: "Jan 2026",
+    sortDate: "2026-01",
+    location: "Online",
+
+    image: "/experience/example-certification.jpg",
+
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+      "A professional certification focused on developing practical knowledge and competency in the related field.",
 
-    image: "/experience-01.jpg",
-    href: "/experience/experience-01",
+    highlights: [
+      "Completed comprehensive learning materials covering key concepts and practical applications.",
+      "Developed practical understanding of tools and methodologies used in the field.",
+      "Earned the certification after completing the required assessments.",
+    ],
 
-    period: "Jan 2026 - Present",
-    sortDate: "9999-12",
+    documentation: [
+      "/experience-photo/example-certification/01.jpg",
+    ],
+
+    externalLink: {
+      label: "VIEW CREDENTIAL",
+      url: "https://example.com",
+    },
   },
 
   {
     id: 2,
+    slug: "example-award",
 
-    type: "COMPETITION",
-    title: "Competition Name",
-    role: "Finalist",
+    title: "Example Award",
+    type: "AWARD",
 
-    image: "/experience-02.jpg",
-    href: "/experience/experience-02",
+    organization: "Awarding Organization",
 
-    period: "Nov 2025",
-    sortDate: "2025-11",
+    period: "Dec 2025",
+    sortDate: "2025-12",
+    location: "Jakarta, Indonesia",
+
+    image: "/experience/example-award.jpg",
+
+    description:
+      "An award received in recognition of achievement and performance in the related activity.",
+
+    highlights: [
+      "Recognized for achievement in the related field.",
+      "Demonstrated strong performance throughout the evaluation process.",
+      "Received recognition from the organizing institution.",
+    ],
+
+    documentation: [
+      "/experience-photo/example-award/01.jpg",
+      "/experience-photo/example-award/02.jpg",
+    ],
   },
 
   {
     id: 3,
+    slug: "example-community-service",
 
-    type: "PROGRAM",
-    title: "Program Name",
-    role: "Participant",
+    title: "Example Community Service",
+    type: "COMMUNITY SERVICE",
 
-    image: "/experience-03.jpg",
-    href: "/experience/experience-03",
+    organization: "Organizing Institution",
+    role: "Volunteer",
 
-    period: "Aug 2025 - Dec 2025",
-    sortDate: "2025-12",
-  },
+    period: "Aug 2025",
+    sortDate: "2025-08",
+    location: "Bandung, Indonesia",
 
-   {
-    id: 4,
+    image: "/experience/example-community-service.jpg",
 
-    type: "PROGRAM",
-    title: "Program Name",
-    role: "Participant",
+    description:
+      "A community service initiative focused on supporting the local community through educational and social activities.",
 
-    image: "/experience-03.jpg",
-    href: "/experience/experience-03",
+    highlights: [
+      "Participated in community-focused activities together with the organizing team.",
+      "Supported the implementation of educational and social initiatives for local participants.",
+      "Collaborated with team members and community stakeholders throughout the program.",
+    ],
 
-    period: "Aug 2025 - Dec 2025",
-    sortDate: "2025-12",
+    documentation: [
+      "/experience-photo/example-community-service/01.jpg",
+      "/experience-photo/example-community-service/02.jpg",
+      "/experience-photo/example-community-service/03.jpg",
+    ],
   },
 ];

@@ -66,7 +66,7 @@ export default function Project() {
       <div className="projectsGrid" ref={projectsRef}>
         {latestProjects.map((project, index) => (
           <Link
-            href={project.href}
+            href={`/projects/${project.slug}`}
             className="projectCard"
             key={project.id}
           >

@@ -8,7 +8,7 @@ import { projects } from "../data/project";
 
 const categories = ["ALL", "AI", "DATA", "IOT"];
 
-export default function ProjectGrid() {
+export default function ProjectList() {
   const [activeCategory, setActiveCategory] = useState("ALL");
 
   const sortedProjects = [...projects].sort(
@@ -23,17 +23,17 @@ export default function ProjectGrid() {
         );
 
   return (
-    <section className="allProjectsSection" id="all-projects">
+    <section className="ProjectsPageSection" id="all-projects">
 
       {/* FILTER */}
-      <div className="projectFilters">
+      <div className="ProjectsPageFilters">
         {categories.map((category) => (
           <button
             key={category}
             className={
               activeCategory === category
-                ? "projectFilter active"
-                : "projectFilter"
+                ? "ProjectsPageFilter active"
+                : "ProjectsPageFilter"
             }
             onClick={() => setActiveCategory(category)}
           >
@@ -43,14 +43,14 @@ export default function ProjectGrid() {
       </div>
 
       {/* GRID */}
-      <div className="allProjectsGrid">
+      <div className="ProjectsPageGrid">
         {filteredProjects.map((project, index) => (
-          <Link
-            href={project.href}
-            className="allProjectCard"
-            key={project.id}
-          >
-            <div className="allProjectImage">
+        <Link
+          href={`/projects/${project.slug}`}
+          className="ProjectsPageCard"
+          key={project.id}
+        >
+            <div className="ProjectsPageImage">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -62,26 +62,26 @@ export default function ProjectGrid() {
                 "
               />
 
-              <span className="allProjectNumber">
+              <span className="ProjectsPageNumber">
                 {String(index + 1).padStart(2, "0")}
               </span>
 
-              <span className="allProjectOpen">
+              <span className="ProjectsPageOpen">
                 ↗
               </span>
             </div>
 
-            <div className="allProjectInfo">
-              <div className="allProjectTitle">
+            <div className="ProjectsPageInfo">
+              <div className="ProjectsPageTitle">
                 <h3>{project.title}</h3>
                 <span>{project.category}</span>
               </div>
 
-              <p className="allProjectPeriod">
+              <p className="ProjectsPagePeriod">
                 {project.period}
               </p>
 
-              <div className="allProjectTags">
+              <div className="ProjectsPageTags">
                 {project.tags.map((tag, tagIndex) => (
                   <span
                     key={`${project.id}-${tag}-${tagIndex}`}
@@ -94,7 +94,6 @@ export default function ProjectGrid() {
           </Link>
         ))}
       </div>
-
     </section>
   );
 }

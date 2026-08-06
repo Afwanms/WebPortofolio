@@ -3,15 +3,15 @@
 import { useState } from "react";
 import Image from "next/image";
 
-type WorkDocumentationProps = {
+type DocumentationProps = {
   images: string[];
-  company: string;
+  title: string;
 };
 
-export default function WorkDocumentation({
+export default function Documentation({
   images,
-  company,
-}: WorkDocumentationProps) {
+  title,
+}: DocumentationProps) {
   const [currentImage, setCurrentImage] = useState(0);
 
   if (images.length === 0) return null;
@@ -32,21 +32,22 @@ export default function WorkDocumentation({
   const visibleImages = Array.from(
     { length: Math.min(3, images.length) },
     (_, index) => ({
-      src: images[(currentImage + index) % images.length],
+      src:
+        images[
+          (currentImage + index) % images.length
+        ],
       originalIndex:
         (currentImage + index) % images.length,
     })
   );
 
   return (
-    <section className="workDocumentation">
-      <div className="workDocumentationHeader">
-        <div>
-          <p>DOCUMENTATION</p>
-        </div>
+    <section className="documentation">
+      <div className="documentationHeader">
+        <p className="documentationTitle">DOCUMENTATION</p>
 
         {images.length > 1 && (
-          <div className="workDocumentationActions">
+          <div className="documentationActions">
             <button
               onClick={previousImage}
               aria-label="Previous image"
@@ -64,15 +65,15 @@ export default function WorkDocumentation({
         )}
       </div>
 
-      <div className="workDocumentationGrid">
+      <div className="documentationGrid">
         {visibleImages.map((image, index) => (
           <div
-            className="workDocumentationImage"
+            className="documentationImage"
             key={`${image.src}-${index}`}
           >
             <Image
               src={image.src}
-              alt={`${company} documentation ${
+              alt={`${title} documentation ${
                 image.originalIndex + 1
               }`}
               fill

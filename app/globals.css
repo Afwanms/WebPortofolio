@@ -9,11 +9,13 @@
 @import "./styles/workList.css";
 @import "./styles/workHero.css";
 @import "./styles/workDetail.css";
-@import "./styles/workDocumentation.css";
 @import "./styles/projectHero.css";
-@import "./styles/projectGrid.css";
+@import "./styles/projectList.css";
+@import "./styles/projectDetail.css";
 @import "./styles/experienceHero.css";
 @import "./styles/experienceList.css";
+@import "./styles/experienceDetail.css";
+@import "./styles/documentation.css";
 @import "./styles/footer.css";
 
 * {

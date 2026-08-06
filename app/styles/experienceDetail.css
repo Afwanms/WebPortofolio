@@ -1,8 +1,8 @@
 /* ================================
-   COMPANY OVERVIEW
+   EXPERIENCE DETAIL OVERVIEW
 ================================ */
 
-.workDetailOverview {
+.experienceDetailOverview {
   position: relative;
 
   width: 100%;
@@ -22,7 +22,7 @@
     );
 }
 
-.workDetailOverviewGrid {
+.experienceDetailOverviewGrid {
   width: 100%;
 
   display: grid;
@@ -35,10 +35,10 @@
 
 
 /* ================================
-   COMPANY IMAGE
+   EXPERIENCE IMAGE
 ================================ */
 
-.workDetailImage {
+.experienceDetailImage {
   position: relative;
 
   width: 100%;
@@ -51,30 +51,28 @@
   background: #07111d;
 }
 
-.workDetailImage img {
-  object-fit: contain;
+.experienceDetailImage img {
+  object-fit: cover;
 
-  padding: 60px;
-
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.workDetailImage:hover img {
+.experienceDetailImage:hover img {
   transform: scale(1.03);
 }
 
 
 /* ================================
-   COMPANY CONTENT
+   EXPERIENCE CONTENT
 ================================ */
 
-.workDetailContent {
+.experienceDetailContent {
   width: 100%;
   min-width: 0;
 }
 
-.workDetailLabel {
-  margin-bottom: 18px;
+.experienceDetailLabel {
+  margin: 0 0 18px;
 
   color: #008cff;
 
@@ -84,10 +82,10 @@
   letter-spacing: 4px;
 }
 
-.workDetailContent h1 {
-  max-width: 700px;
+.experienceDetailContent h1 {
+  max-width: 750px;
 
-  margin: 0 0 15px;
+  margin: 0 0 16px;
 
   color: #ffffff;
 
@@ -95,19 +93,31 @@
   font-weight: 850;
 
   line-height: 0.95;
-
   letter-spacing: -3px;
 }
 
-.workDetailRole {
+.experienceDetailOrganization {
   margin: 0;
 
-  color: #8996a7;
+  color: #a6b0bd;
 
   font-size: clamp(15px, 1.3vw, 19px);
-  font-weight: 400;
+  font-weight: 500;
 
-  letter-spacing: 2px;
+  line-height: 1.5;
+
+  letter-spacing: 1px;
+}
+
+.experienceDetailRole {
+  margin: 8px 0 0;
+
+  color: #667485;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
 }
 
 
@@ -115,7 +125,7 @@
    META INFORMATION
 ================================ */
 
-.workDetailMeta {
+.experienceDetailMeta {
   width: 100%;
 
   display: grid;
@@ -130,11 +140,11 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.workDetailMeta div {
+.experienceDetailMeta div {
   min-width: 0;
 }
 
-.workDetailMeta span {
+.experienceDetailMeta span {
   display: block;
 
   margin-bottom: 8px;
@@ -147,7 +157,7 @@
   letter-spacing: 2px;
 }
 
-.workDetailMeta p {
+.experienceDetailMeta p {
   margin: 0;
 
   color: #d6dce4;
@@ -156,20 +166,19 @@
   font-weight: 500;
 
   line-height: 1.5;
-
   letter-spacing: 0.7px;
 }
 
 
 /* ================================
-   ABOUT COMPANY
+   ABOUT EXPERIENCE
 ================================ */
 
-.workDetailAbout {
+.experienceDetailAbout {
   margin-top: 40px;
 }
 
-.workDetailSectionLabel {
+.experienceDetailSectionLabel {
   margin: 0 0 15px;
 
   color: #008cff;
@@ -180,8 +189,8 @@
   letter-spacing: 3px;
 }
 
-.workDetailDescription {
-  max-width: 650px;
+.experienceDetailDescription {
+  max-width: 680px;
 
   margin: 0;
 
@@ -190,16 +199,73 @@
   font-size: clamp(14px, 1.2vw, 17px);
 
   line-height: 1.8;
-
   letter-spacing: 0.3px;
 }
 
 
 /* ================================
-   RESPONSIBILITIES
+   EXTERNAL LINK
 ================================ */
 
-.workDetailResponsibilities {
+.experienceDetailExternal {
+  width: fit-content;
+  min-width: 185px;
+  height: 48px;
+
+  margin-top: 35px;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  border: 1px solid rgba(0, 140, 255, 0.4);
+
+  background: rgba(0, 140, 255, 0.04);
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.experienceDetailExternal span {
+  color: #008cff;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.experienceDetailExternal:hover {
+  border-color: #008cff;
+
+  background: rgba(0, 140, 255, 0.09);
+
+  transform: translateY(-3px);
+}
+
+.experienceDetailExternal:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* ================================
+   KEY HIGHLIGHTS
+================================ */
+
+.experienceDetailHighlights {
   width: 100%;
 
   display: grid;
@@ -216,9 +282,16 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* LEFT */
 
-.workDetailResponsibilitiesHeader p {
+/* ================================
+   HIGHLIGHTS HEADER
+================================ */
+
+.experienceDetailHighlightsHeader {
+  align-self: center;
+}
+
+.experienceDetailHighlightsHeader > p {
   margin: 0 0 18px;
 
   color: #008cff;
@@ -229,7 +302,7 @@
   letter-spacing: 4px;
 }
 
-.workDetailResponsibilitiesHeader h2 {
+.experienceDetailHighlightsHeader h2 {
   margin: 0;
 
   color: #ffffff;
@@ -238,26 +311,27 @@
   font-weight: 850;
 
   line-height: 0.95;
-
   letter-spacing: -3px;
 }
 
 
 /* ================================
-   RESPONSIBILITY LIST
+   HIGHLIGHTS LIST
 ================================ */
 
-.workDetailResponsibilitiesList {
+.experienceDetailHighlightsList {
   width: 100%;
 
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.workDetailResponsibility {
+.experienceDetailHighlight {
   width: 100%;
 
   display: grid;
   grid-template-columns: 55px minmax(0, 1fr);
+
+  align-items: center;
 
   gap: 25px;
 
@@ -266,7 +340,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.workDetailResponsibilityNumber {
+.experienceDetailHighlightNumber {
   color: #008cff;
 
   font-size: 9px;
@@ -275,7 +349,7 @@
   letter-spacing: 2px;
 }
 
-.workDetailResponsibility p {
+.experienceDetailHighlight p {
   max-width: 750px;
 
   margin: 0;
@@ -291,7 +365,7 @@
     transform 0.3s ease;
 }
 
-.workDetailResponsibility:hover p {
+.experienceDetailHighlight:hover p {
   color: #ffffff;
 
   transform: translateX(5px);
@@ -299,10 +373,10 @@
 
 
 /* ================================
-   BACK TO WORK
+   BACK TO EXPERIENCE
 ================================ */
 
-.workDetailBack {
+.experienceDetailBack {
   width: 100%;
 
   display: flex;
@@ -313,8 +387,8 @@
   background: #03070d;
 }
 
-.workDetailBack a {
-  min-width: 190px;
+.experienceDetailBack a {
+  min-width: 210px;
   height: 48px;
 
   padding: 0 20px;
@@ -342,7 +416,7 @@
     transform 0.3s ease;
 }
 
-.workDetailBack a span {
+.experienceDetailBack a span {
   color: #008cff;
 
   font-size: 17px;
@@ -350,7 +424,7 @@
   transition: transform 0.3s ease;
 }
 
-.workDetailBack a:hover {
+.experienceDetailBack a:hover {
   border-color: #008cff;
 
   background: rgba(0, 140, 255, 0.06);
@@ -358,7 +432,7 @@
   transform: translateY(-3px);
 }
 
-.workDetailBack a:hover span {
+.experienceDetailBack a:hover span {
   transform: translateX(-4px);
 }
 
@@ -368,26 +442,30 @@
 ================================ */
 
 @media (max-width: 1000px) {
-  .workDetailOverview {
+  .experienceDetailOverview {
     padding: 130px 5vw 100px;
   }
 
-  .workDetailOverviewGrid {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  .experienceDetailOverviewGrid {
+    grid-template-columns:
+      minmax(0, 0.8fr)
+      minmax(0, 1.2fr);
 
     gap: 5vw;
   }
 
-  .workDetailImage img {
-    padding: 40px;
-  }
-
-  .workDetailResponsibilities {
+  .experienceDetailHighlights {
     grid-template-columns: 1fr;
+
+    align-items: start;
 
     gap: 55px;
 
     padding: 100px 5vw 110px;
+  }
+
+  .experienceDetailHighlightsHeader {
+    align-self: start;
   }
 }
 
@@ -397,55 +475,55 @@
 ================================ */
 
 @media (max-width: 700px) {
-  .workDetailOverview {
+  .experienceDetailOverview {
     padding: 120px 20px 80px;
   }
 
-  .workDetailOverviewGrid {
+  .experienceDetailOverviewGrid {
     grid-template-columns: 1fr;
 
     gap: 45px;
   }
 
-  .workDetailImage {
+  .experienceDetailImage {
     aspect-ratio: 4 / 3;
   }
 
-  .workDetailImage img {
-    padding: 40px;
-  }
-
-  .workDetailContent h1 {
+  .experienceDetailContent h1 {
     font-size: clamp(36px, 11vw, 55px);
 
     letter-spacing: -2px;
   }
 
-  .workDetailMeta {
+  .experienceDetailMeta {
     grid-template-columns: 1fr;
 
     gap: 20px;
   }
 
-  .workDetailMeta div:not(:last-child) {
+  .experienceDetailMeta div:not(:last-child) {
     padding-bottom: 20px;
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
-  .workDetailResponsibilities {
+  .experienceDetailExternal {
+    width: 100%;
+  }
+
+  .experienceDetailHighlights {
     padding: 80px 20px 100px;
 
     gap: 45px;
   }
 
-  .workDetailResponsibilitiesHeader h2 {
+  .experienceDetailHighlightsHeader h2 {
     font-size: clamp(36px, 11vw, 52px);
 
     letter-spacing: -2px;
   }
 
-  .workDetailResponsibility {
+  .experienceDetailHighlight {
     grid-template-columns: 35px minmax(0, 1fr);
 
     gap: 15px;
@@ -453,11 +531,11 @@
     padding: 25px 0;
   }
 
-  .workDetailBack {
+  .experienceDetailBack {
     padding: 40px 20px 80px;
   }
 
-  .workDetailBack a {
+  .experienceDetailBack a {
     width: 100%;
   }
 }
