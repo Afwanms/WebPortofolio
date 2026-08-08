@@ -8,7 +8,7 @@ export default function WorkHero() {
       <div className="workHeroLine" />
       <div className="workHeroContent">
         <h1>
-          CAREER <span>JOURNEY</span>
+          Professional<span>Experience</span>
         </h1>
       </div>
 

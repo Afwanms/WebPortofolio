@@ -9,8 +9,8 @@ export default function AboutHero() {
 
       <div className="aboutHeroContent">
         <h1>
-          GET TO
-          <span>KNOW ME.</span>
+          Get To
+          <span>Know Me</span>
         </h1>
       </div>
 

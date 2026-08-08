@@ -1,0 +1,713 @@
+/* ================================
+   TOP / HEADER AREA
+================================ */
+
+.recruiterPageUp {
+  width: 100%;
+
+  background: #07101d;
+
+  color: #ffffff;
+
+  padding: 40px 0 0;
+}
+
+.recruiterDocumentUp {
+  width: 960px;
+  max-width: calc(100% - 40px);
+
+  margin: 0 auto;
+
+  padding: 0 70px 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   BACK
+================================ */
+
+.recruiterBack {
+  width: fit-content;
+
+  margin: 0 0 32px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #718092;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.recruiterBack span {
+  color: #008cff;
+
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+.recruiterBack:hover {
+  color: #ffffff;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.recruiterHeader {
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.recruiterHeaderContent {
+  width: 100%;
+}
+
+.recruiterIdentity {
+  width: 100%;
+}
+
+.recruiterHeader h1 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 36px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.recruiterRole {
+  margin: 0 0 15px;
+
+  color: #008cff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.recruiterContactInfo {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px 14px;
+
+  color: #9aa7b5;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.recruiterActions {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  flex-wrap: wrap;
+}
+
+.recruiterButton {
+  height: 36px;
+
+  padding: 0 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.recruiterButton.primary {
+  border-color: #008cff;
+
+  background: #008cff;
+
+  color: #ffffff;
+}
+
+.recruiterButton:hover {
+  border-color: #008cff;
+
+  background: rgba(0, 140, 255, 0.08);
+
+  color: #ffffff;
+}
+
+.recruiterButton.primary:hover {
+  border-color: #007edb;
+
+  background: #007edb;
+
+  color: #ffffff;
+}
+
+
+/* ================================
+   BOTTOM / CV CONTENT AREA
+================================ */
+
+.recruiterPageDown {
+  width: 100%;
+
+  background: #ffffff;
+
+  color: #17202b;
+}
+
+.recruiterDocumentDown {
+  width: 960px;
+  max-width: calc(100% - 40px);
+
+  margin: 0 auto;
+
+  padding: 0 70px 70px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+/* ================================
+   CONTENT SECTION
+================================ */
+
+.recruiterContent {
+  width: 100%;
+
+  display: block;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid #dfe3e7;
+}
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.recruiterSectionHeader {
+  margin-bottom: 16px;
+}
+
+.recruiterSectionHeader h2 {
+  margin: 0;
+
+  color: #07101d;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* ================================
+   SECTION DESCRIPTION
+================================ */
+
+.recruiterSectionDescription {
+  width: 100%;
+}
+
+.recruiterSectionDescription p {
+  max-width: 100%;
+
+  margin: 0;
+
+  color: #414a56;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* ================================
+   TECHNICAL SKILLS
+================================ */
+
+.recruiterSkills {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.recruiterSkillCategory {
+  display: grid;
+
+  grid-template-columns: 210px minmax(0, 1fr);
+
+  column-gap: 20px;
+}
+
+.recruiterSkillCategory span {
+  color: #17202b;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+.recruiterSkillCategory p {
+  margin: 0;
+
+  color: #4b5663;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* ================================
+   PROJECTS
+================================ */
+
+.recruiterProjectList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+.recruiterProject {
+  padding: 0 0 18px;
+
+  margin-bottom: 18px;
+
+  background: transparent;
+
+  border-bottom: 1px solid #e3e6e9;
+}
+
+.recruiterProject:last-child {
+  margin-bottom: 0;
+
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+.recruiterProjectName {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.recruiterProjectName h3 {
+  margin: 0;
+
+  color: #17202b;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.recruiterProjectName span {
+  color: #66717e;
+
+  font-size: 12px;
+  font-weight: 200;
+
+  white-space: nowrap;
+}
+
+.recruiterProject > p {
+  margin: 7px 0 5px;
+
+  color: #4b5663;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.recruiterProjectTools {
+  color: #697482;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.recruiterProject a {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  color: #008cff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.recruiterProject a:hover {
+  color: #007edb;
+}
+
+
+/* ================================
+   EXPERIENCE
+================================ */
+
+.recruiterExperienceList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.recruiterExperience {
+  width: 100%;
+}
+
+.recruiterExperienceHeader {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.recruiterExperienceHeader h3 {
+  margin: 0;
+
+  color: #17202b;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.recruiterExperienceHeader p {
+  margin: 4px 0 0;
+
+  color: #008cff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recruiterExperienceHeader > span {
+  color: #66717e;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+.recruiterExperience ul {
+  margin: 9px 0 0;
+
+  padding-left: 19px;
+}
+
+.recruiterExperience li {
+  margin-bottom: 5px;
+
+  color: #4b5663;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* ================================
+   EDUCATION
+================================ */
+
+.recruiterEducation h3 {
+  margin: 0;
+
+  color: #17202b;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.recruiterEducation p {
+  margin: 5px 0;
+
+  color: #4b5663;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.recruiterEducation span {
+  color: #66717e;
+
+  font-size: 12px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.recruiterContact {
+  width: 100%;
+
+  padding: 28px 0 0;
+}
+
+.recruiterContact h2 {
+  margin: 0 0 12px;
+
+  color: #07101d;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  line-height: 1.25;
+}
+
+.recruiterContact p {
+  margin: 0;
+
+  color: #414a56;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+  .recruiterDocumentUp,
+  .recruiterDocumentDown {
+    width: 900px;
+
+    max-width: calc(100% - 40px);
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+  .recruiterPageUp {
+    padding-top: 25px;
+  }
+
+  .recruiterDocumentUp {
+    width: 100%;
+
+    max-width: none;
+
+    padding: 0 20px 35px;
+  }
+
+  .recruiterPageDown {
+    width: 100%;
+  }
+
+  .recruiterDocumentDown {
+    width: 100%;
+
+    max-width: none;
+
+    padding: 0 20px 50px;
+  }
+
+
+  /* BACK */
+
+  .recruiterBack {
+    margin-bottom: 25px;
+
+    font-size: 12px;
+  }
+
+
+  /* HEADER */
+
+  .recruiterHeader {
+    padding-bottom: 25px;
+  }
+
+  .recruiterHeader h1 {
+    font-size: 30px;
+
+    letter-spacing: -0.5px;
+  }
+
+  .recruiterRole {
+    font-size: 14px;
+  }
+
+
+  /* BUTTONS */
+
+  .recruiterActions {
+    gap: 7px;
+  }
+
+  .recruiterButton {
+    font-size: 14px;
+
+    padding: 0 13px;
+  }
+
+
+  /* CONTENT */
+
+  .recruiterContent {
+    padding: 25px 0;
+  }
+
+  .recruiterSectionHeader {
+    margin-bottom: 14px;
+  }
+
+  .recruiterSectionHeader h2 {
+    font-size: 20px;
+  }
+
+
+  /* TEXT */
+
+  .recruiterSectionDescription p,
+  .recruiterProject > p,
+  .recruiterExperience li,
+  .recruiterEducation p,
+  .recruiterContact p {
+    font-size: 14px;
+  }
+
+
+  /* SKILLS */
+
+  .recruiterSkillCategory {
+    grid-template-columns: 1fr;
+
+    gap: 3px;
+  }
+
+  .recruiterSkillCategory span,
+  .recruiterSkillCategory p {
+    font-size: 14px;
+  }
+
+
+  /* PROJECTS */
+
+  .recruiterProjectName {
+    align-items: flex-start;
+
+    gap: 3px;
+  }
+
+  .recruiterProjectName h3 {
+    font-size: 16px;
+  }
+
+  .recruiterProjectName span {
+    font-size: 12px;
+  }
+
+
+  /* EXPERIENCE */
+
+  .recruiterExperienceHeader {
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+  .recruiterExperienceHeader h3 {
+    font-size: 16px;
+  }
+
+  .recruiterExperienceHeader > span {
+    font-size: 12px;
+  }
+
+
+  /* EDUCATION */
+
+  .recruiterEducation h3 {
+    font-size: 16px;
+  }
+
+  .recruiterEducation span {
+    font-size: 12px;
+  }
+
+
+  /* CONTACT */
+
+  .recruiterContact {
+    padding-top: 25px;
+  }
+}

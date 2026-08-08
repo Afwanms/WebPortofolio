@@ -9,8 +9,8 @@ export default function ProjectHero() {
 
       <div className="projectPageHeroContent">
         <h1>
-          THINGS I'VE
-          <span>BUILT.</span>
+          Detail
+          <span>Project</span>
         </h1>
       </div>
 

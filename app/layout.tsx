@@ -1,19 +1,17 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
 import "./globals.css";
+import SiteChrome from "./components/SiteChrome";
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <SiteChrome>
+          {children}
+        </SiteChrome>
       </body>
     </html>
   );

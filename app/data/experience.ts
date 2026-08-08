@@ -35,10 +35,10 @@ export const experiences = [
 
   {
     id: 2,
-    slug: "example-award",
+    slug: "example-activity",
 
-    title: "Example Award",
-    type: "AWARD",
+    title: "Example Campus Activity",
+    type: "CAMPUS ACTIVITY",
 
     organization: "Awarding Organization",
 
@@ -46,7 +46,7 @@ export const experiences = [
     sortDate: "2025-12",
     location: "Jakarta, Indonesia",
 
-    image: "/experience/example-award.jpg",
+    image: "/experience/example-activity.jpg",
 
     description:
       "An award received in recognition of achievement and performance in the related activity.",

@@ -16,8 +16,8 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link href="/" className="brand">
-        AMS<span>.</span>
+      <Link href="/" className="navLogo">
+        AMS.
       </Link>
 
       <div className="navLinks">
@@ -38,6 +38,17 @@ export default function Navbar() {
           );
         })}
       </div>
+
+      <Link
+        href="/recruiter"
+        className={
+          pathname.startsWith("/recruiter")
+            ? "navRecruiter active"
+            : "navRecruiter"
+        }
+      >
+        RECRUITER VIEW
+      </Link>
     </nav>
   );
 }

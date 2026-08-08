@@ -7,8 +7,8 @@ import { experiences } from "../data/experience";
 
 const categories = [
   "ALL",
+  "CAMPUS ACTIVITY",
   "CERTIFICATION",
-  "AWARD",
   "COMMUNITY SERVICE",
 ];
 
