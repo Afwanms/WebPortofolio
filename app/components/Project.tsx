@@ -69,7 +69,7 @@ export default function Project() {
           {latestProjects.map((project, index) => (
             <Link
               href={`/projects/${project.slug}`}
-              className="projectCard"
+              className="projectCard revealItem"
               key={project.id}
             >
               <div className="projectImage">

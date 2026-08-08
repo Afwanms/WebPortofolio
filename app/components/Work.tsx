@@ -67,7 +67,10 @@ export default function Work() {
 
         <div className="workSlider" ref={workRef}>
           {latestWorks.map((work) => (
-            <Link href={`/work/${work.slug}`} className="workCard" key={work.id}>
+            <Link href={`/work/${work.slug}`} 
+            className="workCard revealItem" 
+            key={work.id}
+            >
               <Image
                 src={work.image}
                 alt={`${work.company} - ${work.role}`}

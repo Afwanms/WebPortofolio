@@ -64,36 +64,37 @@ export default function Experience() {
           ref={experienceRef}
         >
           {experiences.map((experience, index) => (
-            <div
-              className="experienceCard"
-              key={experience.id}
-            >
-              <div className="experienceCardTop">
-                <span className="experienceYear">
-                  {experience.period}
-                </span>
-              </div>
-
-              <div className="experienceCardContent">
-                <p className="experienceCategory">
-                  {experience.type}
-                </p>
-
-                <h3>{experience.title}</h3>
-
-                <p className="experienceRole">
-                  {experience.role}
-                </p>
-              </div>
-
-              <div className="experienceCardBottom">
-                <p>{experience.description}</p>
-
-                <span>↗</span>
-              </div>
+          <Link
+            href={`/experience/${experience.slug}`}
+            className="experienceCard revealItem"
+            key={experience.id}
+          >
+            <div className="experienceCardTop">
+              <span className="experienceYear">
+                {experience.period}
+              </span>
             </div>
-          ))}
-        </div>
+
+            <div className="experienceCardContent">
+              <p className="experienceCategory">
+                {experience.type}
+              </p>
+
+              <h3>{experience.title}</h3>
+
+              <p className="experienceRole">
+                {experience.role}
+              </p>
+            </div>
+
+            <div className="experienceCardBottom">
+              <p>{experience.description}</p>
+
+              <span>↗</span>
+            </div>
+          </Link>
+        ))}
+      </div>
       </section>
     </Reveal>
   );
