@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Link from "next/link";
 import { experiences } from "../data/experience";
+import Reveal from "./Reveal";
 
 export default function Experience() {
   const experienceRef = useRef<HTMLDivElement>(null);
@@ -26,73 +27,74 @@ export default function Experience() {
   };
 
   return (
-    <section className="experienceSection" id="experience">
-
-      <div className="experienceHeader">
-        <div>
-          <p className="experienceLabel">ACTIVITIES & EXPERIENCES</p>
-          <h2>What I&apos;ve Been Part Of</h2>
-        </div>
-
-        <div className="experienceActions">
-          <button
-            className="experienceNav experienceNavInactive"
-            onClick={() => scrollExperience("left")}
-            aria-label="Previous experience"
-          >
-            ←
-          </button>
-
-          <button
-            className="experienceNav"
-            onClick={() => scrollExperience("right")}
-            aria-label="Next experience"
-          >
-            →
-          </button>
-
-          <Link href="/experience" className="experienceViewAll">
-            <span>VIEW ALL EXPERIENCE</span>
-            <span>→</span>
-          </Link>
-        </div>
-      </div>
-
-      <div
-        className="experienceSlider"
-        ref={experienceRef}
-      >
-        {experiences.map((experience, index) => (
-          <div
-            className="experienceCard"
-            key={experience.id}
-          >
-            <div className="experienceCardTop">
-              <span className="experienceYear">
-                {experience.period}
-              </span>
-            </div>
-
-            <div className="experienceCardContent">
-              <p className="experienceCategory">
-                {experience.type}
-              </p>
-
-              <h3>{experience.title}</h3>
-
-              <p className="experienceRole">
-                {experience.role}
-              </p>
-            </div>
-
-            <div className="experienceCardBottom">
-              <p>{experience.description}</p>
-
-              <span>↗</span>
-            </div>
+    <Reveal>
+      <section className="experienceSection" id="experience">
+        <div className="experienceHeader">
+          <div>
+            <p className="experienceLabel">ACTIVITIES & EXPERIENCES</p>
+            <h2>What I&apos;ve Been Part Of</h2>
           </div>
-        ))}
-      </div>
-    </section>
+
+          <div className="experienceActions">
+            <button
+              className="experienceNav experienceNavInactive"
+              onClick={() => scrollExperience("left")}
+              aria-label="Previous experience"
+            >
+              ←
+            </button>
+
+            <button
+              className="experienceNav"
+              onClick={() => scrollExperience("right")}
+              aria-label="Next experience"
+            >
+              →
+            </button>
+
+            <Link href="/experience" className="experienceViewAll">
+              <span>VIEW ALL EXPERIENCE</span>
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+
+        <div
+          className="experienceSlider"
+          ref={experienceRef}
+        >
+          {experiences.map((experience, index) => (
+            <div
+              className="experienceCard"
+              key={experience.id}
+            >
+              <div className="experienceCardTop">
+                <span className="experienceYear">
+                  {experience.period}
+                </span>
+              </div>
+
+              <div className="experienceCardContent">
+                <p className="experienceCategory">
+                  {experience.type}
+                </p>
+
+                <h3>{experience.title}</h3>
+
+                <p className="experienceRole">
+                  {experience.role}
+                </p>
+              </div>
+
+              <div className="experienceCardBottom">
+                <p>{experience.description}</p>
+
+                <span>↗</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </Reveal>
   );
 }

@@ -16,39 +16,37 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link href="/" className="navLogo">
-        AMS.
-      </Link>
 
-      <div className="navLinks">
-        {navItems.map((item) => {
-          const isActive =
-            item.href === "/"
-              ? pathname === "/"
-              : pathname.startsWith(item.href);
+  <Link href="/" className="brand">
+    AMS.
+  </Link>
 
-          return (
-            <Link
-              href={item.href}
-              key={item.name}
-              className={isActive ? "active" : ""}
-            >
-              {item.name}
-            </Link>
-          );
-        })}
-      </div>
+  <div className="navLinks">
+    {navItems.map((item) => {
+      const isActive =
+        item.href === "/"
+          ? pathname === "/"
+          : pathname.startsWith(item.href);
 
-      <Link
-        href="/recruiter"
-        className={
-          pathname.startsWith("/recruiter")
-            ? "navRecruiter active"
-            : "navRecruiter"
-        }
-      >
-        RECRUITER VIEW
-      </Link>
-    </nav>
+      return (
+        <Link
+          href={item.href}
+          key={item.name}
+          className={isActive ? "active" : ""}
+        >
+          {item.name}
+        </Link>
+      );
+    })}
+  </div>
+
+  <Link
+    href="/recruiter"
+    className="navRecruiter"
+  >
+    RECRUITER VIEW
+  </Link>
+
+</nav>
   );
 }

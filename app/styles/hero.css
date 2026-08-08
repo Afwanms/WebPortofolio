@@ -68,7 +68,7 @@
   background: rgba(0, 102, 255, 0.2);
 
   filter: blur(150px);
-
+  animation: glowPulse 6s ease-in-out infinite alternate;
   z-index: -3;
 }
 
@@ -119,6 +119,7 @@
   font-weight: 600;
 
   letter-spacing: 7px;
+  animation: heroFadeUp 0.8s ease-out 0.15s both;
 }
 
 .heroTitle {
@@ -131,6 +132,7 @@
   letter-spacing: -7px;
 
   font-weight: 900;
+  animation: heroTitleReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
 }
 
 .heroTitle span {
@@ -164,37 +166,7 @@
   letter-spacing: 5px;
 
   color: #a8b0bc;
-}
-
-/* ================================
-   AI DATA IOT
-================================ */
-
-.fields {
-  margin-top: 38px;
-
-  display: flex;
-  align-items: center;
-
-  gap: 18px;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  letter-spacing: 4px;
-}
-
-.fields i {
-  display: block;
-
-  width: 45px;
-  height: 1px;
-
-  background: linear-gradient(
-    to right,
-    #008cff,
-    transparent
-  );
+  animation: heroFadeUp 0.8s ease-out 0.15s both;
 }
 
 /* ================================
@@ -275,6 +247,7 @@
   cursor: pointer;
 
   transition: color 0.3s ease;
+  animation: scrollReveal 0.8s ease-out 1.2s both;
 }
 
 .scroll:hover {
@@ -334,7 +307,7 @@
   }
 
   .scroll {
-    left: 25px;
+    left: 50%;
   }
 }
 
@@ -357,5 +330,53 @@
 
   .fields i {
     width: 20px;
+  }
+}
+
+@keyframes heroTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollReveal {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes glowPulse {
+  from {
+    opacity: 0.7;
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.05);
   }
 }

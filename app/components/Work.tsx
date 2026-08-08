@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { works } from "../data/work";
+import Reveal from "./Reveal";
 
 export default function Work() {
   const workRef = useRef<HTMLDivElement>(null);
@@ -32,57 +33,59 @@ export default function Work() {
   };
 
   return (
-    <section className="workSection" id="work">
-      <div className="workHeader">
-        <div>
-          <p className="workLabel">WORK EXPERIENCE</p>
-          <h2>Where I&apos;ve Worked</h2>
+    <Reveal>
+      <section className="workSection" id="work">
+        <div className="workHeader">
+          <div>
+            <p className="workLabel">WORK EXPERIENCE</p>
+            <h2>Where I&apos;ve Worked</h2>
+          </div>
+
+          <div className="workActions">
+            <button
+              className="workArrow workArrowInactive"
+              onClick={() => scrollWork("left")}
+              aria-label="Previous work"
+            >
+              ←
+            </button>
+
+            <button
+              className="workArrow"
+              onClick={() => scrollWork("right")}
+              aria-label="Next work"
+            >
+              →
+            </button>
+
+            <Link href="/work" className="workViewAll">
+              <span>VIEW ALL WORK</span>
+              <span className="workViewAllArrow">→</span>
+            </Link>
+          </div>
         </div>
 
-        <div className="workActions">
-          <button
-            className="workArrow workArrowInactive"
-            onClick={() => scrollWork("left")}
-            aria-label="Previous work"
-          >
-            ←
-          </button>
+        <div className="workSlider" ref={workRef}>
+          {latestWorks.map((work) => (
+            <Link href={`/work/${work.slug}`} className="workCard" key={work.id}>
+              <Image
+                src={work.image}
+                alt={`${work.company} - ${work.role}`}
+                fill
+                className="workImage"
+              />
 
-          <button
-            className="workArrow"
-            onClick={() => scrollWork("right")}
-            aria-label="Next work"
-          >
-            →
-          </button>
+              <div className="workOverlay" />
 
-          <Link href="/work" className="workViewAll">
-            <span>VIEW ALL WORK</span>
-            <span className="workViewAllArrow">→</span>
-          </Link>
+              <div className="workInfo">
+                <span>{work.period}</span>
+                <h3>{work.company}</h3>
+                <p>{work.role}</p>
+              </div>
+            </Link>
+          ))}
         </div>
-      </div>
-
-      <div className="workSlider" ref={workRef}>
-        {latestWorks.map((work) => (
-          <Link href={`/work/${work.slug}`} className="workCard" key={work.id}>
-            <Image
-              src={work.image}
-              alt={`${work.company} - ${work.role}`}
-              fill
-              className="workImage"
-            />
-
-            <div className="workOverlay" />
-
-            <div className="workInfo">
-              <span>{work.period}</span>
-              <h3>{work.company}</h3>
-              <p>{work.role}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </section>
+      </section>
+    </Reveal>
   );
 }

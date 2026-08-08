@@ -88,5 +88,276 @@ export const projects = [
     "/project-photo/customer-service/03.jpg",
   ],
 },
+{
+  id: 3,
+  slug: "netflix-etl-pipeline",
+  title: "Netflix ETL Pipeline",
+  image: "/project-06.jpg",
+  category: "DATA",
+
+  tags: [
+    "Python",
+    "Pandas",
+    "Apache Airflow",
+    "PostgreSQL",
+    "Docker",
+  ],
+
+  period: "Jun 2026",
+  sortDate: "2026-06",
+
+  description:
+    "An automated ETL pipeline designed to extract, transform, and load Netflix dataset records into a PostgreSQL database through an orchestrated data processing workflow.",
+
+  implementation:
+    "Built an end-to-end ETL workflow using Python and Pandas for data extraction and transformation, Apache Airflow for workflow orchestration, and PostgreSQL for data storage. The pipeline was containerized with Docker to provide a consistent and reproducible execution environment.",
+
+  concepts: [
+    "ETL Pipeline",
+    "Data Engineering",
+    "Workflow Orchestration",
+    "Data Transformation",
+    "Data Integration",
+    "Containerization",
+  ],
+
+  impact:
+    "Automated the end-to-end data processing workflow, producing structured and analytics-ready datasets while improving the reliability, scalability, and reproducibility of the data pipeline.",
+
+  github:
+    "https://github.com/Afwanms/NetflixETLPipeline",
+
+  documentation: [
+    "/project-photo/netflix-etl/01.jpg",
+    "/project-photo/netflix-etl/02.jpg",
+    "/project-photo/netflix-etl/03.jpg",
+  ],
+},
+{
+  id: 4,
+  slug: "customer-segmentation-analysis",
+  title: "Customer Segmentation Analysis",
+  image: "/project-05.jpg",
+  category: "DATA",
+
+  tags: [
+    "Microsoft Excel",
+    "PostgreSQL",
+    "SQL",
+    "Power BI",
+  ],
+
+  period: "Jun 2026",
+  sortDate: "2026-06",
+
+  description:
+    "A customer analytics project designed to segment customers based on purchasing behavior using RFM analysis and identify actionable insights for targeted marketing strategies.",
+
+  implementation:
+    "Prepared and cleaned customer transaction data using Microsoft Excel, performed exploratory analysis and calculated Recency, Frequency, and Monetary metrics using PostgreSQL, then developed an interactive Power BI dashboard to visualize customer segments and purchasing patterns.",
+
+  concepts: [
+    "Customer Segmentation",
+    "RFM Analysis",
+    "Customer Behavior Analysis",
+    "Business Intelligence",
+    "Data Visualization",
+    "Marketing Analytics",
+  ],
+
+  impact:
+    "Identified high-value customer segments and purchasing patterns to support customer retention, targeted marketing campaigns, and personalized marketing initiatives.",
+
+  github:
+    "https://github.com/Afwanms/CustomerSegmentationAnalysis",
+
+  documentation: [
+    "/project-photo/customer-segmentation/01.jpg",
+    "/project-photo/customer-segmentation/02.jpg",
+    "/project-photo/customer-segmentation/03.jpg",
+  ],
+},
+{
+  id: 5,
+  slug: "sales-performance-dashboard",
+  title: "Sales Performance Dashboard",
+  image: "/project-04.jpg",
+  category: "DATA",
+
+  tags: [
+    "Microsoft Excel",
+    "PostgreSQL",
+    "SQL",
+    "Power BI",
+  ],
+
+  period: "Jun 2026",
+  sortDate: "2026-06",
+
+  description:
+    "An interactive business intelligence dashboard designed to analyze sales performance, profitability, product performance, and regional business trends using Global Superstore data.",
+
+  implementation:
+    "Performed data cleaning and preprocessing using Microsoft Excel, stored and analyzed the dataset with PostgreSQL and SQL, then developed an interactive Power BI dashboard to visualize key performance indicators, sales trends, product performance, customer contribution, and regional insights.",
+
+  concepts: [
+    "Data Analytics",
+    "Business Intelligence",
+    "Exploratory Data Analysis",
+    "Data Visualization",
+    "KPI Development",
+    "Data Storytelling",
+  ],
+
+  impact:
+    "Provided actionable business insights by identifying top-performing products and categories, regional sales patterns, customer contributions, and overall revenue and profitability trends to support data-driven decision-making.",
+
+  github:
+    "https://github.com/Afwanms/SalesPerformanceDashboard",
+
+  documentation: [
+    "/project-photo/sales-performance/01.jpg",
+    "/project-photo/sales-performance/02.jpg",
+    "/project-photo/sales-performance/03.jpg",
+  ],
+},
+{
+  id: 6,
+  slug: "early-breast-cancer-identification-system",
+  title: "Early Breast Cancer Identification System",
+  image: "/project-07.jpg",
+  category: "IOT",
+
+  tags: [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "scikit-learn",
+    "PPG",
+  ],
+
+  period: "Aug 2025 - Dec 2025",
+  sortDate: "2025-12",
+
+  description:
+    "An AI and IoT-based physiological signal monitoring system designed to support early breast cancer identification through PPG signal acquisition and machine learning classification.",
+
+  implementation:
+    "Designed and developed a hardware prototype for acquiring photoplethysmogram (PPG) signals, then built a machine learning pipeline using Python, Pandas, and NumPy for signal preprocessing and feature extraction. A Decision Tree classifier was developed and evaluated using scikit-learn to classify physiological signal patterns.",
+
+  concepts: [
+    "IoT",
+    "Embedded Systems",
+    "Machine Learning",
+    "PPG Signal Processing",
+    "Classification",
+    "Feature Extraction",
+    "Hardware-Software Integration",
+  ],
+
+  impact:
+    "Integrated physiological signal acquisition hardware with a machine learning classification pipeline, creating a functional prototype for collecting and analyzing PPG signal patterns to support early breast cancer identification research.",
+
+  github:
+    "https://github.com/Afwanms/BreastCancerClassification",
+
+  documentation: [
+    "/project-photo/breast-cancer/01.jpg",
+    "/project-photo/breast-cancer/02.jpg",
+    "/project-photo/breast-cancer/03.jpg",
+  ],
+},
+{
+  id: 7,
+  slug: "dposture-sensor",
+  title: "Dposture Sensor: A Posture Classifier Wearable",
+  image: "/project-08.jpg",
+  category: "IOT",
+
+  tags: [
+    "ESP32",
+    "MPU6050",
+    "Python",
+    "TensorFlow",
+    "1D-CNN",
+    "Embedded Systems",
+  ],
+
+  period: "Feb 2025 - May 2025",
+  sortDate: "2025-05",
+
+  description:
+    "A wearable posture classification system designed to detect proper and improper lifting postures using motion data collected from an MPU6050 IMU sensor.",
+
+  implementation:
+    "Developed a wearable hardware prototype using ESP32 and MPU6050 to collect real-time IMU sensor data. The sensor data was collected and preprocessed in Python, then used to train a 1D-CNN model for lifting posture classification and integrated with the embedded hardware for real-time posture monitoring.",
+
+  concepts: [
+    "Embedded AI",
+    "Wearable Technology",
+    "IoT",
+    "IMU Sensor Processing",
+    "Deep Learning",
+    "1D-CNN",
+    "Real-Time Classification",
+    "Hardware-Software Integration",
+  ],
+
+  impact:
+    "Built a functional wearable prototype capable of classifying proper and improper lifting postures in real time by integrating IMU-based motion sensing with a deep learning classification model.",
+
+  github:
+    "https://github.com/Afwanms/capstone_project",
+
+  documentation: [
+    "/project-photo/dposture/01.jpg",
+    "/project-photo/dposture/02.jpg",
+    "/project-photo/dposture/03.jpg",
+  ],
+},
+{
+  id: 8,
+  slug: "vibration-alert-system",
+  title: "Vibration Alert System",
+  image: "/project-01.jpg",
+  category: "IOT",
+
+  tags: [
+    "ESP8266",
+    "ESP-NOW",
+    "C/C++",
+    "Arduino IDE",
+  ],
+
+  period: "Jun 2026 - Jul 2026",
+  sortDate: "2026-07",
+
+  description:
+    "A wireless wearable alert system designed to provide real-time physical notifications for deaf and hard-of-hearing users through configurable vibration patterns.",
+
+  implementation:
+    "Developed a wearable alert system using ESP8266 devices communicating through ESP-NOW, enabling a transmitter to deliver target-specific notifications to multiple wearable receivers. Integrated keypad and OLED interfaces for alert selection and monitoring, with distinct vibration patterns for different notification types.",
+
+  concepts: [
+    "IoT",
+    "Wireless Communication",
+    "Embedded Systems",
+    "Wearable Technology",
+    "Assistive Technology",
+    "Device-to-Device Communication",
+  ],
+
+  impact:
+    "Developed a functional assistive technology prototype that converts important auditory notifications such as teacher calls, school bells, and emergency alerts into distinct vibration patterns, helping deaf and hard-of-hearing users receive timely physical notifications.",
+
+  github:
+    "https://github.com/Afwanms/VibrationAlertSystem",
+
+  documentation: [
+    "/project-photo/vibration/01.jpg",
+    "/project-photo/vibration/02.jpg",
+    "/project-photo/vibration/03.jpg",
+  ],
+},
 
 ];
