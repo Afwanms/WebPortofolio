@@ -25,7 +25,7 @@ export default function RecruiterView() {
                                         rel="noopener noreferrer"
                                         className="recruiterButton primary"
                                     >
-                                        DOWNLOAD CV
+                                        Download Resume
                                     </a>
 
                                     <a
@@ -34,7 +34,7 @@ export default function RecruiterView() {
                                         rel="noopener noreferrer"
                                         className="recruiterButton"
                                     >
-                                        GITHUB
+                                        GitHub
                                     </a>
 
                                     <a
@@ -43,14 +43,14 @@ export default function RecruiterView() {
                                         rel="noopener noreferrer"
                                         className="recruiterButton"
                                     >
-                                        LINKEDIN
+                                        LinkedIn
                                     </a>
 
                                     <a
                                         href="mailto:your@email.com"
                                         className="recruiterButton"
                                     >
-                                        EMAIL
+                                        Email
                                     </a>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@ export default function RecruiterView() {
                                         </p>
                                     </div>
                                     <span>
-                                        Jun 2025 — Aug 2025
+                                        Jun 2025 - Aug 2025
                                     </span>
                                 </div>
                                 <ul>
@@ -219,21 +219,23 @@ export default function RecruiterView() {
                         </div>
                     </section>
                     <section className="recruiterContent">
-                    <div className="recruiterSectionHeader">
-                        <h2>
-                            Education
-                        </h2>
-                    </div>
+                        <div className="recruiterSectionHeader">
+                            <h2>
+                                Education
+                            </h2>
+                        </div>
                         <div className="recruiterEducation">
-                            <h3>
-                                Universitas Brawijaya
-                            </h3>
-                            <p>
-                                Computer Engineering, Faculty of Computer Science - GPA 3.85 / 4.0
-                            </p>
-                            <span>
+                            <div className="recruiterEducationHeader">
+                                <h3>Universitas Brawijaya</h3>
+
+                                <span>
                                 2022 - 2026
-                            </span>
+                                </span>
+                            </div>
+
+                            <p>
+                                Computer Engineering, Faculty of Computer Science — GPA 3.85 / 4.0
+                            </p>
                         </div>
                     </section>
                     <section className="recruiterContact">

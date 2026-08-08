@@ -7,11 +7,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navItems = [
-    { name: "HOME", href: "/" },
-    { name: "ABOUT", href: "/about" },
-    { name: "WORK", href: "/work" },
-    { name: "PROJECT", href: "/projects" },
-    { name: "EXPERIENCE", href: "/experience" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Work", href: "/work" },
+    { name: "Project", href: "/projects" },
+    { name: "Experience", href: "/experience" },
   ];
 
   return (
