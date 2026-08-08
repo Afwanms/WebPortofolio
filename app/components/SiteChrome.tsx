@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -11,8 +12,15 @@ export default function SiteChrome({
 }) {
   const pathname = usePathname();
 
-  const isRecruiterPage =
-    pathname.startsWith("/recruiter");
+  const isRecruiterPage = pathname.startsWith("/recruiter");
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
 
   if (isRecruiterPage) {
     return <>{children}</>;

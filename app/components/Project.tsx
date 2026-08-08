@@ -79,11 +79,6 @@ export default function Project() {
                   fill
                   sizes="(max-width: 600px) 85vw, 400px"
                 />
-
-                <span className="projectNumber">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
                 <div className="projectOpen">↗</div>
               </div>
 
