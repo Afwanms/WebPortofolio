@@ -76,7 +76,7 @@
 
   color: #008cff;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 4px;
@@ -89,11 +89,11 @@
 
   color: #ffffff;
 
-  font-size: clamp(38px, 4.5vw, 70px);
+  font-size: 32px;
   font-weight: 850;
 
   line-height: 0.95;
-  letter-spacing: -3px;
+  letter-spacing: -0.5px;
 }
 
 .experienceDetailOrganization {
@@ -101,7 +101,7 @@
 
   color: #a6b0bd;
 
-  font-size: clamp(15px, 1.3vw, 19px);
+  font-size: 16px;
   font-weight: 500;
 
   line-height: 1.5;
@@ -151,7 +151,7 @@
 
   color: #526070;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -162,7 +162,7 @@
 
   color: #d6dce4;
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
 
   line-height: 1.5;
@@ -183,7 +183,7 @@
 
   color: #008cff;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 3px;
@@ -196,7 +196,7 @@
 
   color: #98a3b2;
 
-  font-size: clamp(14px, 1.2vw, 17px);
+  font-size: 16px;
 
   line-height: 1.8;
   letter-spacing: 0.3px;
@@ -296,7 +296,7 @@
 
   color: #008cff;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 4px;
@@ -307,11 +307,11 @@
 
   color: #ffffff;
 
-  font-size: clamp(38px, 4vw, 65px);
+  font-size: 24px;
   font-weight: 850;
 
   line-height: 0.95;
-  letter-spacing: -3px;
+  letter-spacing: -0.5px;
 }
 
 
@@ -343,7 +343,7 @@
 .experienceDetailHighlightNumber {
   color: #008cff;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -356,7 +356,7 @@
 
   color: #a6b0bd;
 
-  font-size: clamp(14px, 1.2vw, 17px);
+  font-size: 16px;
 
   line-height: 1.7;
 
@@ -403,7 +403,7 @@
 
   color: #ffffff;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 2px;

@@ -59,16 +59,16 @@
 .projectDetailLeft h1 {
   max-width: 700px;
 
-  margin: 0 0 45px;
+  margin: 0 0 15px;
 
   color: #ffffff;
 
-  font-size: clamp(50px, 6vw, 92px);
+  font-size: 32px;
   font-weight: 900;
 
-  line-height: 0.88;
+  line-height: 0.95;
 
-  letter-spacing: -5px;
+  letter-spacing: -0.5px;
 }
 
 
@@ -133,7 +133,7 @@
 
   color: #008cff;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 3px;
@@ -146,7 +146,7 @@
 
   color: #9ca7b5;
 
-  font-size: clamp(14px, 1.15vw, 17px);
+  font-size: 16px;
 
   line-height: 1.8;
 
@@ -179,7 +179,7 @@
 
   color: #536273;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -190,7 +190,7 @@
 
   color: #d9dee5;
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
 
   letter-spacing: 0.5px;
@@ -217,7 +217,7 @@
 
   color: #8793a2;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 1.3px;
@@ -268,7 +268,7 @@
 
   text-decoration: none;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -321,11 +321,11 @@
 
   color: #ffffff;
 
-  font-size: clamp(48px, 5vw, 78px);
+  font-size: 24px;
   font-weight: 800;
 
   line-height: 0.95;
-  letter-spacing: -4px;
+  letter-spacing: -0.5px;
 }
 
 .projectImpactContent {
@@ -344,7 +344,7 @@
 
   color: #b5bfcc;
 
-  font-size: clamp(17px, 1.5vw, 24px);
+  font-size: 16px;
 
   line-height: 1.8;
 }
@@ -358,12 +358,9 @@
   width: 100%;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  gap: 20px;
-
-  padding: 65px 7vw 100px;
+  padding: 60px 7vw 100px;
 
   background: #03070d;
 }
@@ -387,7 +384,7 @@
 
   text-decoration: none;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -428,8 +425,7 @@
   }
 
   .projectDetailLeft h1 {
-    font-size:
-      clamp(45px, 7vw, 75px);
+    font-size: 32px;
 
     letter-spacing: -4px;
   }
@@ -466,8 +462,7 @@
   .projectDetailLeft h1 {
     margin-bottom: 30px;
 
-    font-size:
-      clamp(45px, 14vw, 70px);
+    font-size: 32px;
 
     line-height: 0.9;
 

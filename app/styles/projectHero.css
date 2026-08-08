@@ -116,7 +116,7 @@
 
   color: white;
 
-  font-size: clamp(60px, 8vw, 125px);
+  font-size: 76px;
   line-height: 0.85;
 
   letter-spacing: -6px;
@@ -170,7 +170,7 @@
 
   color: #687384;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
 
   letter-spacing: 3px;

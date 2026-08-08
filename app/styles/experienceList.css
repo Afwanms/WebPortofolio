@@ -105,32 +105,6 @@
   );
 }
 
-
-/* ================================
-   NUMBER
-================================ */
-
-.experiencePageNumber {
-  position: absolute;
-
-  top: 20px;
-  left: 20px;
-
-  z-index: 3;
-
-  padding: 7px 10px;
-
-  background: rgba(2, 4, 9, 0.75);
-
-  color: #008cff;
-
-  font-size: 9px;
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-
 /* ================================
    OPEN BUTTON
 ================================ */
@@ -191,7 +165,7 @@
 
   color: #008cff;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 3px;
@@ -202,7 +176,7 @@
 
   color: white;
 
-  font-size: clamp(22px, 1.8vw, 28px);
+  font-size: 24px;
   font-weight: 800;
 
   line-height: 1.05;
@@ -224,7 +198,7 @@
 
   color: #718093;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
 
   letter-spacing: 2px;

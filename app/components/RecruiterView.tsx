@@ -168,7 +168,7 @@ export default function RecruiterView() {
                                     suitable candidates for client interviews.
                                 </p>
                                 <div className="recruiterProjectTools">
-                                    Python · ollama · FastAPI · 
+                                    Python · Llama · Ollama · FastAPI · React · PostgreSQL · Docker · AWS EC2
                                 </div>
                                 <Link href="/projects/recruitment-feedback-analyzer">
                                     VIEW PROJECT →

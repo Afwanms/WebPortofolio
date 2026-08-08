@@ -68,10 +68,6 @@ export default function Experience() {
             key={experience.id}
           >
             <div className="experienceCardTop">
-              <span className="experienceNumber">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
               <span className="experienceYear">
                 {experience.period}
               </span>

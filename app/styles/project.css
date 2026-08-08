@@ -52,7 +52,7 @@
 }
 
 .projectsHeader h2 {
-  font-size: clamp(22px, 2vw, 28px);
+  font-size: 24px;
   line-height: 0.95;
   letter-spacing: -3px;
   font-weight: 800;
@@ -78,7 +78,7 @@
   background: #008cff;
   color: white;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 1.2px;
@@ -334,7 +334,7 @@
 }
 
 .projectInfo h3 {
-  font-size: clamp(21px, 2vw, 29px);
+  font-size: 24px;
 
   line-height: 1.05;
 
@@ -363,7 +363,7 @@
 
   color: #798697;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
 
   letter-spacing: 1px;

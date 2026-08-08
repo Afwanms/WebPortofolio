@@ -154,15 +154,6 @@ export default function ProjectDetail({
           <span>←</span>
           BACK TO PROJECTS
         </Link>
-
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VIEW ON GITHUB
-          <span>↗</span>
-        </a>
       </div>
     </>
   );
