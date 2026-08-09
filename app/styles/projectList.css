@@ -386,3 +386,7 @@
     height: 350px;
   }
 }
+
+.ProjectsPageGrid > .reveal {
+  min-width: 0;
+}

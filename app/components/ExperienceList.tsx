@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "./Reveal";
 import { experiences } from "../data/experience";
 
 const categories = [
@@ -55,46 +56,47 @@ export default function ExperienceList() {
       <div className="experiencePageGrid">
         {filteredExperiences.map(
           (experience, index) => (
-            <Link
-              href={`/experience/${experience.slug}`}
-              className="experiencePageCard"
-              key={experience.id}
-            >
-              <div className="experiencePageImage">
-                <Image
-                  src={experience.image}
-                  alt={experience.title}
-                  fill
-                  sizes="
-                    (max-width: 600px) 100vw,
-                    (max-width: 1000px) 50vw,
-                    33vw
-                  "
-                />
+            <Reveal key={experience.id}>
+              <Link
+                href={`/experience/${experience.slug}`}
+                className="experiencePageCard"
+              >
+                <div className="experiencePageImage">
+                  <Image
+                    src={experience.image}
+                    alt={experience.title}
+                    fill
+                    sizes="
+                      (max-width: 600px) 100vw,
+                      (max-width: 1000px) 50vw,
+                      33vw
+                    "
+                  />
 
-                <div className="experiencePageOverlay" />
+                  <div className="experiencePageOverlay" />
 
-                <span className="experiencePageOpen">
-                  ↗
-                </span>
-
-                <div className="experiencePageInfo">
-                  <p className="experiencePageType">
-                    {experience.type}
-                  </p>
-
-                  <h3>{experience.title}</h3>
-
-                  <p className="experiencePageRole">
-                    {experience.role}
-                  </p>
-
-                  <span className="experiencePagePeriod">
-                    {experience.period}
+                  <span className="experiencePageOpen">
+                    ↗
                   </span>
+
+                  <div className="experiencePageInfo">
+                    <p className="experiencePageType">
+                      {experience.type}
+                    </p>
+
+                    <h3>{experience.title}</h3>
+
+                    <p className="experiencePageRole">
+                      {experience.role}
+                    </p>
+
+                    <span className="experiencePagePeriod">
+                      {experience.period}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </Reveal>
           )
         )}
       </div>

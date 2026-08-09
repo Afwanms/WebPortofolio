@@ -52,7 +52,8 @@ export default function Skills() {
                 ];
 
               return (
-                <div className="hardSkill" key={skill.id}>
+                <div className="hardSkill revealItem" 
+                key={skill.id}>
                   <Icon />
 
                   <span>{skill.name}</span>
@@ -70,7 +71,7 @@ export default function Skills() {
 
           <div className="softSkillsGrid">
             {softSkills.map((skill) => (
-              <div className="softSkill" key={skill}>
+              <div className="softSkill revealItem" key={skill}>
                 {skill}
               </div>
             ))}

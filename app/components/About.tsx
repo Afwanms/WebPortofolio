@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 export default function About() {
     return (
       <section id="about-content" className="aboutSection">
@@ -6,7 +7,7 @@ export default function About() {
 
           {/* PHOTO */}
           <div className="aboutPhotoArea">
-            <div className="aboutPhotoWrapper">
+            <div className="aboutPhotoWrapper revealItem">
               <Image
                 src="/my-photo.jpg"
                 alt="Afwan Maulana"
@@ -19,7 +20,7 @@ export default function About() {
           </div>
 
           {/* CONTENT */}
-          <div className="aboutContent">
+          <div className="aboutContent revealItem">
             <p className="sectionLabel">ABOUT ME</p>
 
             <h2>

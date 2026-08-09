@@ -93,8 +93,11 @@
 .projectPageHeroContent {
   position: relative;
   z-index: 5;
-
   text-align: center;
+  animation:
+    projectHeroReveal 0.9s
+    cubic-bezier(0.16, 1, 0.3, 1)
+    both;
 }
 
 .projectPageHeroLabel {
@@ -176,6 +179,7 @@
   letter-spacing: 3px;
 
   text-decoration: none;
+  animation: scrollReveal 0.4s ease-out 0.7s both;
 }
 
 .projectPageHeroScroll:hover {
@@ -213,4 +217,28 @@
   background: rgba(0, 140, 255, 0.08);
 
   transform: translateY(4px);
+}
+
+@keyframes projectHeroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollReveal {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }

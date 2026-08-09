@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import Reveal from "./Reveal";
 import { projects } from "../data/project";
 
 const categories = ["ALL", "AI", "DATA", "IOT"];
@@ -45,11 +45,11 @@ export default function ProjectList() {
       {/* GRID */}
       <div className="ProjectsPageGrid">
         {filteredProjects.map((project, index) => (
-        <Link
-          href={`/projects/${project.slug}`}
-          className="ProjectsPageCard"
-          key={project.id}
-        >
+          <Reveal key={project.id}>
+            <Link
+              href={`/projects/${project.slug}`}
+              className="ProjectsPageCard"
+            >
             <div className="ProjectsPageImage">
               <Image
                 src={project.image}
@@ -92,6 +92,7 @@ export default function ProjectList() {
               </div>
             </div>
           </Link>
+        </Reveal>
         ))}
       </div>
     </section>
