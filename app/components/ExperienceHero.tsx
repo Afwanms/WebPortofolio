@@ -9,7 +9,8 @@ export default function ExperienceHero() {
 
       <div className="experienceHeroContent">
         <h1>
-          <span>Achievements</span>
+          Another
+          <span>Activity</span>
         </h1>
       </div>
 

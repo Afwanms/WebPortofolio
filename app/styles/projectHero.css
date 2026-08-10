@@ -128,14 +128,7 @@
 }
 
 .projectPageHeroContent h1 span {
-  color: transparent;
-
-  background: linear-gradient(
-    90deg,
-    #ffffff 0%,
-    #00a3ff 45%,
-    #0057ff 100%
-  );
+  color:#00a3ff;
 
   background-clip: text;
   -webkit-background-clip: text;

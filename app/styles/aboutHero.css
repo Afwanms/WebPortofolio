@@ -133,14 +133,7 @@
 }
 
 .aboutHeroContent h1 span {
-  color: transparent;
-
-  background: linear-gradient(
-    90deg,
-    #ffffff,
-    #00a3ff 50%,
-    #0057ff
-  );
+  color: #00a3ff;
 
   background-clip: text;
   -webkit-background-clip: text;

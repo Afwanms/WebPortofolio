@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Documentation from "./Documentation";
+import Reveal from "./Reveal";
 
 type Work = {
     id: number;
@@ -35,50 +36,52 @@ return (
     <>
     <section className="workDetailOverview">
         <div className="workDetailOverviewGrid">
-
-        <div className="workDetailImage">
-            <Image
-            src={work.image}
-            alt={work.company}
-            fill
-            priority
-            sizes="(max-width: 900px) 100vw, 40vw"
-            />
-        </div>
-        <div className="workDetailContent">
-            <h1>{work.company}</h1>
-            <p className="workDetailRole">
-            {work.role}
-            </p>
-
-            <div className="workDetailMeta">
-            <div>
-                <span>PERIOD</span>
-                <p>{work.period}</p>
+        <Reveal>
+            <div className="workDetailImage">
+                <Image
+                src={work.image}
+                alt={work.company}
+                fill
+                priority
+                sizes="(max-width: 900px) 100vw, 40vw"
+                />
             </div>
+        </Reveal>
+        <Reveal>
+            <div className="workDetailContent">
+                <h1>{work.company}</h1>
+                <p className="workDetailRole">
+                {work.role}
+                </p>
 
-            <div>
-                <span>LOCATION</span>
-                <p>{work.location}</p>
+                <div className="workDetailMeta">
+                <div>
+                    <span>PERIOD</span>
+                    <p>{work.period}</p>
+                </div>
+
+                <div>
+                    <span>LOCATION</span>
+                    <p>{work.location}</p>
+                </div>
+
+                <div>
+                    <span>TYPE</span>
+                    <p>{work.type}</p>
+                </div>
+                </div>
+
+                <div className="workDetailAbout">
+                <p className="workDetailSectionLabel">
+                    ABOUT THE COMPANY
+                </p>
+
+                <p className="workDetailDescription">
+                    {work.description}
+                </p>
+                </div>
             </div>
-
-            <div>
-                <span>TYPE</span>
-                <p>{work.type}</p>
-            </div>
-            </div>
-
-            <div className="workDetailAbout">
-            <p className="workDetailSectionLabel">
-                ABOUT THE COMPANY
-            </p>
-
-            <p className="workDetailDescription">
-                {work.description}
-            </p>
-            </div>
-        </div>
-
+        </Reveal>
         </div>
     </section>
     <section className="workDetailResponsibilities">
@@ -88,22 +91,24 @@ return (
         </h2>
         </div>
 
+        <Reveal>
         <div className="workDetailResponsibilitiesList">
-        {work.responsibilities.map(
+            {work.responsibilities.map(
             (responsibility, index) => (
-            <div
-                className="workDetailResponsibility"
+                <div
+                className="workDetailResponsibility revealItem"
                 key={index}
-            >
+                >
                 <span className="workDetailResponsibilityNumber">
-                {String(index + 1).padStart(2, "0")}
+                    {String(index + 1).padStart(2, "0")}
                 </span>
 
                 <p>{responsibility}</p>
-            </div>
+                </div>
             )
-        )}
+            )}
         </div>
+        </Reveal>
     </section>
     <Documentation
         images={work.documentation ?? []}

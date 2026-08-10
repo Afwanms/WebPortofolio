@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Documentation from "./Documentation";
+import Reveal from "./Reveal";
 
 type Experience = {
   id: number;
@@ -45,7 +46,7 @@ export default function ExperienceDetail({
       <section className="experienceDetailOverview">
         <div className="experienceDetailOverviewGrid">
 
-          {/* IMAGE */}
+        <Reveal>
           <div className="experienceDetailImage">
             <Image
               src={experience.image}
@@ -55,8 +56,8 @@ export default function ExperienceDetail({
               sizes="(max-width: 700px) 100vw, 45vw"
             />
           </div>
-
-          {/* CONTENT */}
+        </Reveal>
+        <Reveal>
           <div className="experienceDetailContent">
 
             <p className="experienceDetailLabel">
@@ -119,6 +120,7 @@ export default function ExperienceDetail({
               </a>
             )}
           </div>
+        </Reveal>
         </div>
       </section>
 
@@ -128,8 +130,6 @@ export default function ExperienceDetail({
       <section className="experienceDetailHighlights">
 
         <div className="experienceDetailHighlightsHeader">
-          <p>KEY HIGHLIGHTS</p>
-
           <h2>
             Experience
             <br />
@@ -137,22 +137,23 @@ export default function ExperienceDetail({
           </h2>
         </div>
 
-        <div className="experienceDetailHighlightsList">
-          {experience.highlights.map(
-            (highlight, index) => (
-              <div
-                className="experienceDetailHighlight"
-                key={index}
-              >
-                <span className="experienceDetailHighlightNumber">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <p>{highlight}</p>
-              </div>
-            )
-          )}
-        </div>
+        <Reveal>
+          <div className="experienceDetailHighlightsList">
+            {experience.highlights.map(
+              (highlight, index) => (
+                <div
+                  className="experienceDetailHighlight revealItem"
+                  key={index}
+                >
+                  <span className="experienceDetailHighlightNumber">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <p>{highlight}</p>
+                </div>
+              )
+            )}
+          </div>
+        </Reveal>
       </section>
 
       {/* =========================

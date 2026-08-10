@@ -9,7 +9,7 @@ export default function ProjectHero() {
 
       <div className="projectPageHeroContent">
         <h1>
-          Detail
+          Finished
           <span>Project</span>
         </h1>
       </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Documentation from "./Documentation";
+import Reveal from "./Reveal";
 
 type Project = {
   id: number;
@@ -37,113 +38,108 @@ export default function ProjectDetail({
     <>
       <section className="projectDetail">
         <div className="projectDetailGrid">
-
-          {/* LEFT */}
-          <div className="projectDetailLeft">
-            <h1>{project.title}</h1>
-
-            <div className="projectDetailImage">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                priority
-                sizes="(max-width: 800px) 100vw, 50vw"
-              />
-            </div>
-          </div>
-
-          {/* RIGHT */}
-          <div className="projectDetailRight">
-
-            {/* ABOUT */}
-            <div className="projectDetailBlock">
-              <p className="projectDetailBlockLabel">
-                ABOUT THE PROJECT
-              </p>
-
-              <p className="projectDetailDescription">
-                {project.description}
-              </p>
-            </div>
-
-            {/* META */}
-            <div className="projectDetailMeta">
-              <div>
-                <span>PERIOD</span>
-                <p>{project.period}</p>
-              </div>
-
-              <div>
-                <span>CATEGORY</span>
-                <p>{project.category}</p>
+          <Reveal>
+            <div className="projectDetailLeft">
+              <h1>{project.title}</h1>
+              <div className="projectDetailImage">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  priority
+                  sizes="(max-width: 800px) 100vw, 50vw"
+                />
               </div>
             </div>
+          </Reveal>
+          <Reveal>
+            <div className="projectDetailRight">
+              <div className="projectDetailBlock">
+                <p className="projectDetailBlockLabel">
+                  ABOUT THE PROJECT
+                </p>
 
-            {/* TECH STACK */}
-            <div className="projectDetailBlock">
-              <p className="projectDetailBlockLabel">
-                TECH STACK
-              </p>
-
-              <div className="projectDetailTags">
-                {project.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
+                <p className="projectDetailDescription">
+                  {project.description}
+                </p>
               </div>
-            </div>
 
-            {/* CONCEPTS */}
-            <div className="projectDetailBlock">
-              <p className="projectDetailBlockLabel">
-                CONCEPTS LEARNED
-              </p>
+              {/* META */}
+              <div className="projectDetailMeta">
+                <div>
+                  <span>PERIOD</span>
+                  <p>{project.period}</p>
+                </div>
 
-              <div className="projectDetailTags">
-                {project.concepts.map((concept) => (
-                  <span key={concept}>{concept}</span>
-                ))}
+                <div>
+                  <span>CATEGORY</span>
+                  <p>{project.category}</p>
+                </div>
               </div>
+
+              {/* TECH STACK */}
+              <div className="projectDetailBlock">
+                <p className="projectDetailBlockLabel">
+                  TECH STACK
+                </p>
+
+                <div className="projectDetailTags">
+                  {project.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* CONCEPTS */}
+              <div className="projectDetailBlock">
+                <p className="projectDetailBlockLabel">
+                  CONCEPTS LEARNED
+                </p>
+
+                <div className="projectDetailTags">
+                  {project.concepts.map((concept) => (
+                    <span key={concept}>{concept}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* IMPLEMENTATION */}
+              <div className="projectDetailBlock">
+                <p className="projectDetailBlockLabel">
+                  IMPLEMENTATION
+                </p>
+
+                <p className="projectDetailDescription">
+                  {project.implementation}
+                </p>
+              </div>
+
+              {/* GITHUB */}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="projectDetailGithub"
+              >
+                <span>VIEW ON GITHUB</span>
+                <span>↗</span>
+              </a>
             </div>
-
-            {/* IMPLEMENTATION */}
-            <div className="projectDetailBlock">
-              <p className="projectDetailBlockLabel">
-                IMPLEMENTATION
-              </p>
-
-              <p className="projectDetailDescription">
-                {project.implementation}
-              </p>
-            </div>
-
-            {/* GITHUB */}
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="projectDetailGithub"
-            >
-              <span>VIEW ON GITHUB</span>
-              <span>↗</span>
-            </a>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* =========================
-          IMPACT
-      ========================== */}
       <section className="projectImpact">
         <div className="projectImpactHeader">
           <h2>
             Results & Impact
           </h2>
         </div>
-
-        <div className="projectImpactContent">
-          <p>{project.impact}</p>
-        </div>
+        <Reveal>
+          <div className="projectImpactContent revealItem">
+            <p>{project.impact}</p>
+          </div>
+        </Reveal>
       </section>
       <Documentation
         images={project.documentation ?? []}
