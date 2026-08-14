@@ -267,8 +267,16 @@ export const experiences = [
     ],
 
     documentation: [
-      "/experience-photo/robotiik-filkom/head-division/001.jpg",
-      "/experience-photo/robotiik-filkom/head-division/001.jpg",
+      "/experience-photo/robotiik-filkom/head-division/001.png",
+      "/experience-photo/robotiik-filkom/head-division/002.png",
+      "/experience-photo/robotiik-filkom/head-division/003.png",
+      "/experience-photo/robotiik-filkom/head-division/004.png",
+      "/experience-photo/robotiik-filkom/head-division/005.png",
+      "/experience-photo/robotiik-filkom/head-division/006.png",
+      "/experience-photo/robotiik-filkom/head-division/007.png",
+      "/experience-photo/robotiik-filkom/head-division/008.png",
+      "/experience-photo/robotiik-filkom/head-division/009.png",
+      "/experience-photo/robotiik-filkom/head-division/010.png",
     ],
   },
   {
@@ -399,7 +407,7 @@ export const experiences = [
     sortDate: "2023-12",
     location: "Malang, Jawa Timur",
 
-    image: "/experience/digital-system-teaching-assistant.jpg",
+    image: "/experience-photo/practicum-assistant/001.png",
 
     description:
       "A teaching assistant experience supporting digital systems practicum through hands-on circuit design, simulation, and troubleshooting activities.",
@@ -428,7 +436,7 @@ export const experiences = [
     sortDate: "2024-11",
     location: "Malang, Jawa Timur",
 
-    image: "/experience/microprocessor-microcontroller-teaching-assistant.jpg",
+    image: "/experience-photo/practicum-assistant/001.png",
 
     description:
       "A teaching assistant experience supporting microprocessor and microcontroller programming practicum through hands-on programming and hardware implementation.",
@@ -457,7 +465,7 @@ export const experiences = [
     sortDate: "2025-06",
     location: "Malang, Jawa Timur",
 
-    image: "/experience/embedded-system-teaching-assistant.jpg",
+    image: "/experience-photo/practicum-assistant/001.png",
 
     description:
       "A teaching assistant experience supporting embedded systems practicum through hands-on Arduino programming, system design, and embedded implementation.",
