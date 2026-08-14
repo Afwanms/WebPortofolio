@@ -377,8 +377,10 @@ export const experiences = [
     ],
 
     documentation: [
-      "/experience-photo/fundamentals-embedded-cps/01.jpg",
-      "/experience-photo/fundamentals-embedded-cps/02.jpg",
+      "/experience-photo/res-laboratory/teaching-assistant-cps/001.png",
+      "/experience-photo/res-laboratory/teaching-assistant-cps/002.png",
+      "/experience-photo/res-laboratory/teaching-assistant-cps/003.png",
+      "/experience-photo/res-laboratory/teaching-assistant-cps/004.png",
     ],
   },
   {
@@ -406,8 +408,10 @@ export const experiences = [
     ],
 
     documentation: [
-      "/experience-photo/smart-monitoring-nb-iot/01.jpg",
-      "/experience-photo/smart-monitoring-nb-iot/02.jpg",
+      "/experience-photo/res-laboratory/teaching-assistant-iot/001.png",
+      "/experience-photo/res-laboratory/teaching-assistant-iot/002.png",
+      "/experience-photo/res-laboratory/teaching-assistant-iot/003.png",
+      "/experience-photo/res-laboratory/teaching-assistant-iot/004.png",
     ],
   },
   {
