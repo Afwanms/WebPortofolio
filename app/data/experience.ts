@@ -338,8 +338,18 @@ export const experiences = [
     ],
 
     documentation: [
-      "/experience-photo/laboratory-assistant/002.png",
-      "/experience-photo/laboratory-assistant/003.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/001.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/002.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/003.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/004.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/005.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/006.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/007.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/008.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/009.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/010.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/011.png",
+      "/experience-photo/res-laboratory/laboratory-assistant/012.png",
     ],
   },
   {
