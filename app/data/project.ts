@@ -3,7 +3,7 @@ export const projects = [
   id: 1,
   slug: "recruitment-feedback-analyzer",
   title: "Recruitment Feedback Analyzer",
-  image: "/project-02.jpg",
+  image: "/project-photo/recruitment-feedback/001.png",
   category: "AI",
 
   tags: [
@@ -41,16 +41,17 @@ export const projects = [
     "https://github.com/Afwanms/RecruitmentFeedbackAnalyzer",
 
   documentation: [
-    "/project-photo/recruitment-feedback/01.jpg",
-    "/project-photo/recruitment-feedback/02.jpg",
-    "/project-photo/recruitment-feedback/03.jpg",
+    "/project-photo/recruitment-feedback/002.png",
+    "/project-photo/recruitment-feedback/003.png",
+    "/project-photo/recruitment-feedback/004.png",
+    "/project-photo/recruitment-feedback/005.png",
   ],
 },
 {
   id: 2,
   slug: "ai-powered-customer-service-insight",
   title: "AI-Powered Customer Service Insight",
-  image: "/project-03.jpg",
+  image: "/project-photo/customer-service/001.png",
   category: "AI",
 
   tags: [
@@ -83,16 +84,16 @@ export const projects = [
     null,
 
   documentation: [
-    "/project-photo/customer-service/01.jpg",
-    "/project-photo/customer-service/02.jpg",
-    "/project-photo/customer-service/03.jpg",
+    "/project-photo/customer-service/002.png",
+    "/project-photo/customer-service/003.png",
+    "/project-photo/customer-service/004.png",
   ],
 },
 {
   id: 3,
   slug: "netflix-etl-pipeline",
   title: "Netflix ETL Pipeline",
-  image: "/project-06.jpg",
+  image: "/project-photo/netflix-etl/001.png",
   category: "DATA",
 
   tags: [
@@ -128,16 +129,16 @@ export const projects = [
     "https://github.com/Afwanms/NetflixETLPipeline",
 
   documentation: [
-    "/project-photo/netflix-etl/01.jpg",
-    "/project-photo/netflix-etl/02.jpg",
-    "/project-photo/netflix-etl/03.jpg",
+    "/project-photo/netflix-etl/002.png",
+    "/project-photo/netflix-etl/003.png",
+    "/project-photo/netflix-etl/004.png",
   ],
 },
 {
   id: 4,
   slug: "customer-segmentation-analysis",
   title: "Customer Segmentation Analysis",
-  image: "/project-05.jpg",
+  image: "/project-photo/customer-segmentation/001.png",
   category: "DATA",
 
   tags: [
@@ -172,16 +173,15 @@ export const projects = [
     "https://github.com/Afwanms/CustomerSegmentationAnalysis",
 
   documentation: [
-    "/project-photo/customer-segmentation/01.jpg",
-    "/project-photo/customer-segmentation/02.jpg",
-    "/project-photo/customer-segmentation/03.jpg",
+   "/project-photo/customer-segmentation/002.png",
+   "/project-photo/customer-segmentation/003.png",
   ],
 },
 {
   id: 5,
   slug: "sales-performance-dashboard",
   title: "Sales Performance Dashboard",
-  image: "/project-04.jpg",
+  image: "/project-photo/sales-performance/001.png",
   category: "DATA",
 
   tags: [
@@ -216,16 +216,15 @@ export const projects = [
     "https://github.com/Afwanms/SalesPerformanceDashboard",
 
   documentation: [
-    "/project-photo/sales-performance/01.jpg",
-    "/project-photo/sales-performance/02.jpg",
-    "/project-photo/sales-performance/03.jpg",
+    "/project-photo/sales-performance/002.png",
+    "/project-photo/sales-performance/003.png",
   ],
 },
 {
   id: 6,
   slug: "early-breast-cancer-identification-system",
   title: "Early Breast Cancer Identification System",
-  image: "/project-07.jpg",
+  image: "/project-photo/breast-cancer/001.png",
   category: "IOT",
 
   tags: [
@@ -262,16 +261,16 @@ export const projects = [
     "https://github.com/Afwanms/BreastCancerClassification",
 
   documentation: [
-    "/project-photo/breast-cancer/01.jpg",
-    "/project-photo/breast-cancer/02.jpg",
-    "/project-photo/breast-cancer/03.jpg",
+    "/project-photo/breast-cancer/002.jpg",
+    "/project-photo/breast-cancer/003.jpeg",
+    "/project-photo/breast-cancer/004.jpg",
   ],
 },
 {
   id: 7,
   slug: "dposture-sensor",
   title: "Dposture Sensor: A Posture Classifier Wearable",
-  image: "/project-08.jpg",
+  image: "/project-photo/dposture-sensor/001.png",
   category: "IOT",
 
   tags: [
@@ -310,16 +309,16 @@ export const projects = [
     "https://github.com/Afwanms/capstone_project",
 
   documentation: [
-    "/project-photo/dposture/01.jpg",
-    "/project-photo/dposture/02.jpg",
-    "/project-photo/dposture/03.jpg",
+    "/project-photo/dposture-sensor/002.png",
+    "/project-photo/dposture-sensor/003.png",
+    "/project-photo/dposture-sensor/004.png",
   ],
 },
 {
   id: 8,
   slug: "vibration-alert-system",
   title: "Vibration Alert System",
-  image: "/project-01.jpg",
+  image: "/project-photo/vibration-alert/001.jpeg",
   category: "IOT",
 
   tags: [
@@ -354,9 +353,9 @@ export const projects = [
     "https://github.com/Afwanms/VibrationAlertSystem",
 
   documentation: [
-    "/project-photo/vibration/01.jpg",
-    "/project-photo/vibration/02.jpg",
-    "/project-photo/vibration/03.jpg",
+    "/project-photo/vibration-alert/002.jpeg",
+    "/project-photo/vibration-alert/003.png",
+    "/project-photo/vibration-alert/004.png",
   ],
 },
 

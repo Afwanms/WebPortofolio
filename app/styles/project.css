@@ -1,176 +1,80 @@
-.projectsSection {
+/* ================================
+   PROJECT SECTION
+================================ */
+
+.projectSection {
   position: relative;
 
   width: 100%;
+  min-height: 560px;
 
   padding: 75px 5vw 80px;
 
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 90% 10%,
-      rgba(0, 102, 255, 0.12),
-      transparent 30%
-    ),
     linear-gradient(
-      180deg,
-      #020409 0%,
-      #03101d 100%
-    );
+      110deg,
+      rgba(0, 102, 255, 0.05),
+      transparent 35%
+    ),
+    #05080d;
 }
+
 
 /* ================================
    HEADER
 ================================ */
 
-.projectsHeader {
-  width: 100%;
-
+.projectHeader {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
 
-  gap: 30px;
+  align-items: flex-end;
+  justify-content: space-between;
 
-  margin-bottom: 55px;
+  margin-bottom: 38px;
 }
 
-.projectsHeader > div:first-child {
-  min-width: 0;
-}
-
-.projectsLabel {
-  margin-bottom: 15px;
+.projectLabel {
+  margin-bottom: 8px;
 
   color: #008cff;
 
   font-size: 10px;
   font-weight: 700;
 
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
 
-.projectsHeader h2 {
+.projectHeader h2 {
   font-size: 24px;
-  line-height: 0.95;
-  letter-spacing: -3px;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
   font-weight: 800;
 }
 
 
 /* ================================
-   VIEW ALL
+   ACTIONS
 ================================ */
 
-.viewAllButton {
-  width: 200px;
-  height: 48px;
-
-  flex-shrink: 0;
-
-  padding: 0 16px 0 20px;
-
+.projectActions {
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
-
-  background: #008cff;
-  color: white;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 1.2px;
-
-  white-space: nowrap;
-
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
-}
-
-.viewAllButton:hover {
-  background: #0074d4;
-
-  transform: translateY(-3px);
-}
-
-.viewAllArrow {
-  font-size: 22px;
-
-  transition: transform 0.3s ease;
-}
-
-.viewAllButton:hover .viewAllArrow {
-  transform: translateX(5px);
-}
-
-/* ================================
-   PROJECT GRID
-================================ */
-
-.projectsGrid {
-  display: flex;
-  gap: 28px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scroll-behavior: smooth;
-
-  padding-bottom: 20px;
-
-  /* hide scrollbar */
-  scrollbar-width: none;
-}
-
-.projectsGrid::-webkit-scrollbar {
-  display: none;
-}
-
-/* ================================
-   PROJECT CARD
-================================ */
-
-.projectCard {
-  position: relative;
-
-  /* Card tidak mengecil dan lanjut ke kanan */
-  flex: 0 0 400px;
-
-  display: block;
-  overflow: hidden;
-
-  background: #06111e;
-
-  transition: transform 0.4s ease;
-}
-
-.projectCard:hover {
-  transform: translateY(-8px);
-}
-/* ================================
-   PROJECT ACTIONS
-================================ */
-
-.projectsActions {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 
   gap: 10px;
 }
 
 .projectArrow {
-  width: 48px;
-  height: 48px;
-
-  flex: 0 0 48px;
+  width: 45px;
+  height: 45px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -185,77 +89,156 @@
   cursor: pointer;
 
   transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.projectArrow:hover {
+  transform: scale(1.08);
+
+  background: #00a3ff;
+}
+
+.projectArrowInactive {
+  background: rgba(255, 255, 255, 0.12);
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* ================================
+   VIEW ALL
+================================ */
+
+.projectViewAll {
+  width: 190px;
+  height: 45px;
+
+  padding: 0 16px 0 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  background: #008cff;
+  color: white;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  transition:
     background 0.3s ease,
     transform 0.3s ease;
 }
 
-.projectArrow:hover {
+.projectViewAll:hover {
   background: #00a3ff;
-  transform: scale(1.08);
+
+  transform: translateY(-2px);
 }
 
-.projectArrowDisabled {
-  background: rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.45);
+.projectViewAllArrow {
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
 }
 
-.projectArrowDisabled:hover {
-  background: rgba(255, 255, 255, 0.18);
+.projectViewAll:hover
+.projectViewAllArrow {
+  transform: translateX(4px);
 }
+
+
+/* ================================
+   SLIDER
+================================ */
+
+.projectSlider {
+  display: flex;
+
+  gap: 38px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.projectSlider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.projectCard {
+  position: relative;
+
+  flex: 0 0 31vw;
+
+  min-width: 420px;
+  height: 295px;
+
+  overflow: hidden;
+
+  background: #07111d;
+
+  cursor: pointer;
+
+  color: inherit;
+  text-decoration: none;
+}
+
 
 /* ================================
    IMAGE
 ================================ */
 
 .projectImage {
-  position: relative;
-
-  height: 440px;
-
-  overflow: hidden;
-
-  background: #07101c;
-}
-
-.projectImage img {
   object-fit: cover;
 
   transition:
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.5s ease;
+    transform 0.7s
+    cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.projectCard:hover .projectImage img {
-  transform: scale(1.06);
-
-  filter: brightness(0.7);
+.projectCard:hover
+.projectImage {
+  transform: scale(1.05);
 }
+
 
 /* ================================
-   NUMBER
+   OVERLAY
 ================================ */
 
-.projectNumber {
+.projectOverlay {
   position: absolute;
 
-  top: 20px;
-  left: 20px;
+  inset: 0;
 
-  z-index: 2;
-
-  padding: 7px 10px;
-
-  background: rgba(2, 4, 9, 0.75);
-
-  backdrop-filter: blur(8px);
-
-  color: #008cff;
-
-  font-size: 9px;
-  font-weight: 700;
-
-  letter-spacing: 2px;
+  background:
+    linear-gradient(
+      to top,
+      rgba(2, 4, 9, 0.92) 0%,
+      rgba(2, 4, 9, 0.2) 55%,
+      transparent 100%
+    );
 }
+
 
 /* ================================
    OPEN ICON
@@ -264,15 +247,16 @@
 .projectOpen {
   position: absolute;
 
-  top: 20px;
-  right: 20px;
+  top: 18px;
+  right: 18px;
 
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
 
   display: flex;
-  justify-content: center;
+
   align-items: center;
+  justify-content: center;
 
   border-radius: 50%;
 
@@ -280,188 +264,146 @@
 
   color: white;
 
-  font-size: 20px;
+  font-size: 18px;
 
   opacity: 0;
 
-  transform: translateY(10px);
+  transform: translateY(8px);
 
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;
 }
 
-.projectCard:hover .projectOpen {
+.projectCard:hover
+.projectOpen {
   opacity: 1;
 
   transform: translateY(0);
 }
 
+
 /* ================================
-   PROJECT INFO
+   INFORMATION
 ================================ */
 
 .projectInfo {
-  position: relative;
+  position: absolute;
 
-  min-height: 180px;
+  left: 25px;
+  right: 25px;
+  bottom: 22px;
 
-  padding: 25px 28px 28px;
-
-  transition: background 0.3s ease;
+  z-index: 2;
 }
 
-.projectCard:hover .projectInfo {
-  background: #008cff;
-  color: #ffffff;
-}
+.projectInfo > span {
+  display: block;
 
-.projectInfo > p {
-  margin-bottom: 13px;
+  margin-bottom: 7px;
 
   color: #008cff;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 3px;
-
-  transition: color 0.3s ease;
-}
-
-.projectCard:hover .projectInfo > p {
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .projectInfo h3 {
+  margin-bottom: 9px;
+
+  color: white;
+
   font-size: 24px;
-
-  line-height: 1.05;
-
-  letter-spacing: -1px;
-
   font-weight: 750;
+
+  letter-spacing: -0.5px;
 }
+
 
 /* ================================
    TAGS
 ================================ */
 
 .projectTags {
-  margin-top: 22px;
-
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 7px;
 }
 
 .projectTags span {
-  padding: 6px 9px;
+  padding: 5px 8px;
 
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-  color: #798697;
+  color: #a0a9b7;
 
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
 
   letter-spacing: 1px;
 
   transition:
-    color 0.3s ease,
-    border 0.3s ease;
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
-.projectCard:hover .projectTags span {
-  color: white;
+.projectCard:hover
+.projectTags span {
+  border-color: rgba(0, 140, 255, 0.45);
 
-  border-color: rgba(255, 255, 255, 0.35);
+  color: #d4dce6;
 }
+
 
 /* ================================
-   BOTTOM DECORATION
+   RESPONSIVE
 ================================ */
 
-.projectsBottom {
-  margin-top: 60px;
-
-  display: flex;
-  align-items: center;
-
-  gap: 20px;
-
-  color: #526070;
-
-  font-size: 9px;
-
-  letter-spacing: 3px;
-}
-
-.projectsBottom div {
-    height: 1px;
-    flex: 1;
-    background: rgba(255, 255, 255, 0.08);
-}
-
 @media (max-width: 900px) {
-    .projectsSection {
-        padding: 100px 25px;
-    }
+  .projectSection {
+    min-height: auto;
 
-    .projectsHeader {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 30px;
-    }
+    padding: 70px 25px;
+  }
 
-    .projectCard {
-        flex: 0 0 75vw;
-    }
+  .projectCard {
+    flex: 0 0 75vw;
 
-    .projectImage {
-        height: 450px;
-    }
+    min-width: 0;
 
-    .experienceSection {
-        padding: 100px 25px;
-    }
+    height: 280px;
+  }
 }
 
-@media (max-width: 600px) {
-    .projectsSection {
-        padding: 100px 20px;
-    }
-
-    .projectsHeader {
-        gap: 20px;
-    }
-
-    .projectsActions {
-        justify-content: flex-start;
-    }
-
-    .projectsBottom {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-}
 
 @media (max-width: 600px) {
-    .projectsHeader h2 {
-        font-size: 40px;
-    }
+  .projectHeader {
+    align-items: flex-start;
 
-    .viewAllButton {
-        width: 100%;
-    }
+    flex-direction: column;
 
-    .projectImage {
-        height: 350px;
-    }
+    gap: 25px;
+  }
 
-    .projectCard {
-        flex: 0 0 85vw;
-    }
+  .projectActions {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+  .projectViewAll {
+    width: 100%;
+
+    margin-top: 5px;
+  }
+
+  .projectCard {
+    flex: 0 0 85vw;
+
+    height: 240px;
+  }
 }

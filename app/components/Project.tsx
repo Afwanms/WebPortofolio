@@ -9,12 +9,14 @@ import Reveal from "./Reveal";
 export default function Project() {
   const projectsRef = useRef<HTMLDivElement>(null);
 
-  // URUTKAN PROJECT TERBARU → TERLAMA
+  // TERBARU → TERLAMA
   const latestProjects = [...projects].sort(
     (a, b) => b.sortDate.localeCompare(a.sortDate)
   );
 
-  const scrollProjects = (direction: "left" | "right") => {
+  const scrollProjects = (
+    direction: "left" | "right"
+  ) => {
     if (!projectsRef.current) return;
 
     const card = projectsRef.current.querySelector(
@@ -23,28 +25,40 @@ export default function Project() {
 
     if (!card) return;
 
-    const gap = 28;
+    const gap = 38;
     const scrollAmount = card.offsetWidth + gap;
 
     projectsRef.current.scrollBy({
-      left: direction === "right" ? scrollAmount : -scrollAmount,
+      left:
+        direction === "right"
+          ? scrollAmount
+          : -scrollAmount,
       behavior: "smooth",
     });
   };
 
   return (
     <Reveal>
-      <section className="projectsSection" id="projects">
-        <div className="projectsHeader">
+      <section className="projectSection">
+
+        {/* HEADER */}
+        <div className="projectHeader">
           <div>
-            <p className="projectsLabel">LATEST PROJECTS</p>
-            <h2>What I&apos;ve Been Working On</h2>
+            <p className="projectLabel">
+              LATEST PROJECTS
+            </p>
+
+            <h2>
+              What I&apos;ve Been Working On
+            </h2>
           </div>
 
-          <div className="projectsActions">
+          <div className="projectActions">
             <button
-              className="projectArrow projectArrowDisabled"
-              onClick={() => scrollProjects("left")}
+              className="projectArrow projectArrowInactive"
+              onClick={() =>
+                scrollProjects("left")
+              }
               aria-label="Previous project"
             >
               ←
@@ -52,50 +66,86 @@ export default function Project() {
 
             <button
               className="projectArrow"
-              onClick={() => scrollProjects("right")}
+              onClick={() =>
+                scrollProjects("right")
+              }
               aria-label="Next project"
             >
               →
             </button>
 
-            <Link href="/projects" className="viewAllButton">
+            <Link
+              href="/projects"
+              className="projectViewAll"
+            >
               <span>VIEW ALL PROJECTS</span>
-              <span className="viewAllArrow">→</span>
+
+              <span className="projectViewAllArrow">
+                →
+              </span>
             </Link>
           </div>
         </div>
 
-        <div className="projectsGrid" ref={projectsRef}>
-          {latestProjects.map((project, index) => (
+
+        {/* SLIDER */}
+        <div
+          className="projectSlider"
+          ref={projectsRef}
+        >
+          {latestProjects.map((project) => (
             <Link
               href={`/projects/${project.slug}`}
-              className="projectCard revealItem"
+              className="projectCard"
               key={project.id}
             >
-              <div className="projectImage">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 600px) 85vw, 400px"
-                />
-                <div className="projectOpen">↗</div>
+              {/* IMAGE */}
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                sizes="(max-width: 600px) 85vw, 31vw"
+                className="projectImage"
+              />
+
+              {/* OVERLAY */}
+              <div className="projectOverlay" />
+
+              {/* OPEN */}
+              <div className="projectOpen">
+                ↗
               </div>
 
+              {/* INFORMATION */}
               <div className="projectInfo">
-                <h3>{project.title}</h3>
 
-                <div className="projectTags">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span key={`${project.id}-${tag}-${tagIndex}`}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                <span>
+                  {project.period}
+                </span>
+
+                <h3>
+                  {project.title}
+                </h3>
+
+              <div className="projectTags">
+                {project.tags.slice(0, 3).map((tag, index) => (
+                  <span key={`${tag}-${index}`}>
+                    {tag}
+                  </span>
+                ))}
+
+                {project.tags.length > 3 && (
+                  <span className="projectTagsMore">
+                    +{project.tags.length - 3}
+                  </span>
+                )}
+              </div>
+
               </div>
             </Link>
           ))}
         </div>
+
       </section>
     </Reveal>
   );

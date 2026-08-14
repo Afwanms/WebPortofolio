@@ -62,10 +62,6 @@ export default function ProjectList() {
                 "
               />
 
-              <span className="ProjectsPageNumber">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
               <span className="ProjectsPageOpen">
                 ↗
               </span>

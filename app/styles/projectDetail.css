@@ -91,7 +91,7 @@
 }
 
 .projectDetailImage img {
-  object-fit: cover;
+  object-fit: contain;
 
   transition:
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { experiences } from "../data/experience";
 import Reveal from "./Reveal";
@@ -8,7 +9,13 @@ import Reveal from "./Reveal";
 export default function Experience() {
   const experienceRef = useRef<HTMLDivElement>(null);
 
-  const scrollExperience = (direction: "left" | "right") => {
+  const sortedExperiences = [...experiences].sort(
+    (a, b) => b.sortDate.localeCompare(a.sortDate)
+  );
+
+  const scrollExperience = (
+    direction: "left" | "right"
+  ) => {
     if (!experienceRef.current) return;
 
     const card = experienceRef.current.querySelector(
@@ -17,28 +24,40 @@ export default function Experience() {
 
     if (!card) return;
 
-    const gap = 24;
+    const gap = 38;
     const scrollAmount = card.offsetWidth + gap;
 
     experienceRef.current.scrollBy({
-      left: direction === "right" ? scrollAmount : -scrollAmount,
+      left:
+        direction === "right"
+          ? scrollAmount
+          : -scrollAmount,
       behavior: "smooth",
     });
   };
 
   return (
     <Reveal>
-      <section className="experienceSection" id="experience">
+      <section className="experienceSection">
+
+        {/* HEADER */}
         <div className="experienceHeader">
           <div>
-            <p className="experienceLabel">ACTIVITIES & EXPERIENCES</p>
-            <h2>What I&apos;ve Been Part Of</h2>
+            <p className="experienceLabel">
+              ACTIVITIES & EXPERIENCES
+            </p>
+
+            <h2>
+              What I&apos;ve Been Part Of
+            </h2>
           </div>
 
           <div className="experienceActions">
             <button
               className="experienceNav experienceNavInactive"
-              onClick={() => scrollExperience("left")}
+              onClick={() =>
+                scrollExperience("left")
+              }
               aria-label="Previous experience"
             >
               ←
@@ -46,55 +65,64 @@ export default function Experience() {
 
             <button
               className="experienceNav"
-              onClick={() => scrollExperience("right")}
+              onClick={() =>
+                scrollExperience("right")
+              }
               aria-label="Next experience"
             >
               →
             </button>
 
-            <Link href="/experience" className="experienceViewAll">
+            <Link
+              href="/experience"
+              className="experienceViewAll"
+            >
               <span>VIEW ALL EXPERIENCE</span>
-              <span>→</span>
+              <span className="experienceViewAllArrow">
+                →
+              </span>
             </Link>
           </div>
         </div>
 
+        {/* SLIDER */}
         <div
           className="experienceSlider"
           ref={experienceRef}
         >
-          {experiences.map((experience, index) => (
-          <Link
-            href={`/experience/${experience.slug}`}
-            className="experienceCard revealItem"
-            key={experience.id}
-          >
-            <div className="experienceCardTop">
-              <span className="experienceYear">
-                {experience.period}
-              </span>
-            </div>
+          {sortedExperiences.map((experience) => (
+            <Link
+              href={`/experience/${experience.slug}`}
+              className="experienceCard"
+              key={experience.id}
+            >
+              <Image
+                src={experience.image}
+                alt={experience.title}
+                fill
+                sizes="(max-width: 600px) 85vw, 31vw"
+                className="experienceImage"
+              />
 
-            <div className="experienceCardContent">
-              <p className="experienceCategory">
-                {experience.type}
-              </p>
+              <div className="experienceOverlay" />
 
-              <h3>{experience.title}</h3>
+              <div className="experienceOpen">
+                ↗
+              </div>
 
-              <p className="experienceRole">
-                {experience.role}
-              </p>
-            </div>
+              <div className="experienceInfo">
+                <span>
+                  {experience.type}
+                </span>
 
-            <div className="experienceCardBottom">
-              <p>{experience.description}</p>
+                <h3>
+                  {experience.title}
+                </h3>
+              </div>
+            </Link>
+          ))}
+        </div>
 
-              <span>↗</span>
-            </div>
-          </Link>
-        ))}
-      </div>
       </section>
     </Reveal>
   );
