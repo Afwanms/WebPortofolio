@@ -7,15 +7,15 @@ import Reveal from "./Reveal";
 import { experiences } from "../data/experience";
 
 const categories = [
-  "ALL",
-  "CAMPUS ACTIVITY",
-  "CERTIFICATION",
-  "COMMUNITY SERVICE",
+  "All",
+  "Campus Activity",
+  "Certification",
+  "Community Service",
 ];
 
 export default function ExperienceList() {
   const [activeCategory, setActiveCategory] =
-    useState("ALL");
+    useState("All");
 
   // Latest → Oldest
   const sortedExperiences = [...experiences].sort(
@@ -23,7 +23,7 @@ export default function ExperienceList() {
   );
 
   const filteredExperiences =
-    activeCategory === "ALL"
+    activeCategory === "All"
       ? sortedExperiences
       : sortedExperiences.filter(
           (experience) =>
@@ -83,13 +83,7 @@ export default function ExperienceList() {
                     <p className="experiencePageType">
                       {experience.type}
                     </p>
-
                     <h3>{experience.title}</h3>
-
-                    <p className="experiencePageRole">
-                      {experience.role}
-                    </p>
-
                     <span className="experiencePagePeriod">
                       {experience.period}
                     </span>

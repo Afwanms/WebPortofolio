@@ -303,8 +303,14 @@ export const experiences = [
     ],
 
     documentation: [
-      "/experience-photo/robotik-filkom-ub-electrical/01.jpg",
-      "/experience-photo/robotik-filkom-ub-electrical/02.jpg",
+      "/experience-photo/robotiik-filkom/electrical-staff/001.png",
+      "/experience-photo/robotiik-filkom/electrical-staff/002.png",
+      "/experience-photo/robotiik-filkom/electrical-staff/003.png",
+      "/experience-photo/robotiik-filkom/electrical-staff/004.png",
+      "/experience-photo/robotiik-filkom/electrical-staff/005.png",
+      "/experience-photo/robotiik-filkom/electrical-staff/006.png",
+      "/experience-photo/robotiik-filkom/electrical-staff/007.png",
+      "/experience-photo/robotiik-filkom/electrical-staff/008.png",
     ],
   },
   {
