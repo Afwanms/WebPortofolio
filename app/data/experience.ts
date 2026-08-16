@@ -439,8 +439,8 @@ export const experiences = [
     ],
 
     documentation: [
-      "/experience-photo/digital-system/01.jpg",
-      "/experience-photo/digital-system/02.jpg",
+      "/experience-photo/practicum-assistant/digital-system/001.png",
+      "/experience-photo/practicum-assistant/digital-system/002.png",
     ],
   },
   {
@@ -468,8 +468,8 @@ export const experiences = [
     ],
 
     documentation: [
-      "/experience-photo/microprocessor-microcontroller/01.jpg",
-      "/experience-photo/microprocessor-microcontroller/02.jpg",
+      "/experience-photo/practicum-assistant/microcontroler-microprocesor/001.png",
+      "/experience-photo/practicum-assistant/microcontroler-microprocesor/002.png",
     ],
   },
   {
@@ -497,8 +497,8 @@ export const experiences = [
     ],
 
     documentation: [
-      "/experience-photo/embedded-system/01.jpg",
-      "/experience-photo/embedded-system/02.jpg",
+      "/experience-photo/practicum-assistant/embedded-system/001.png",
+      "/experience-photo/practicum-assistant/embedded-system/002.png",
     ],
   },
 ];
