@@ -22,7 +22,7 @@ type Project = {
   implementation: string;
   impact: string;
 
-  github: string;
+  github: string | null;
 
   documentation?: string[];
 };
@@ -115,15 +115,17 @@ export default function ProjectDetail({
               </div>
 
               {/* GITHUB */}
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="projectDetailGithub"
-              >
-                <span>VIEW ON GITHUB</span>
-                <span>↗</span>
-              </a>
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="projectDetailGithub"
+                >
+                  <span>VIEW ON GITHUB</span>
+                  <span>↗</span>
+                </a>
+              )}
             </div>
           </Reveal>
         </div>

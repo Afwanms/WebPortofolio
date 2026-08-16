@@ -3,6 +3,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaGithub,
+  FaEnvelope,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -15,12 +16,21 @@ export default function Footer() {
 
         <div className="footerSocials">
           <a
-            href="https://wa.me/6281387603591"
             target="_blank"
+            href="https://wa.me/6281387603591"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
           >
             <FaWhatsapp />
+          </a>
+          
+          <a
+            target="_blank"
+            href="mailto:afwanmaulanas02@gmail.com"
+            rel="noopener noreferrer"
+            aria-label="Gmail"
+          >
+            <FaEnvelope />
           </a>
 
           <a
