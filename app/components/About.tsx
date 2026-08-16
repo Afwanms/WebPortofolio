@@ -24,14 +24,11 @@ export default function About() {
             <p className="sectionLabel">ABOUT ME</p>
 
             <h2>
-              "ENJOYING BUILDING THINGS
-              <span> WITH TECHNOLOGY."</span>
+              "Using Data To Build Better Solutions."
             </h2>
 
             <p className="aboutDescription">
-              Hi, My name is Afwan Maulana Sidqi. I&apos;m a computer engineering graduate who is passionate about building
-              technology and exploring how Artificial Intelligence, Data, and Internet of Things can be used to solve real-world
-              problems.
+              Hi, I'm Afwan Maulana Sidqi. I enjoy working with data, exploring AI, and building technology that solves real-world problems. With a background in Computer Engineering, I'm always curious about how technology can turn ideas and data into something useful.
             </p>
           </div>
 
