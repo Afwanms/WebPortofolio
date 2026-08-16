@@ -153,19 +153,6 @@
   font-weight: 800;
 }
 
-.aboutContent h2 span {
-  color: transparent;
-
-  background: linear-gradient(
-    90deg,
-    #ffffff,
-    #008cff
-  );
-
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
 .aboutDescription {
   margin-top: 35px;
 
