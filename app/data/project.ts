@@ -280,6 +280,8 @@ export const projects = [
     "TensorFlow",
     "1D-CNN",
     "Embedded Systems",
+    "Flask",
+    "MQTT",
   ],
 
   period: "Feb 2025 - May 2025",
