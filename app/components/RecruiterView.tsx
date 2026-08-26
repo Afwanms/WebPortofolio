@@ -66,7 +66,7 @@ export default function RecruiterView() {
                         </div>
                             <div className="recruiterSectionDescription">
                                 <p>
-                                    Passionate about building practical AI and data-driven solutions that solve real-world problems. Experienced in developing automated AI pipelines, data analytics systems, and interactive dashboards, including a pipeline that processed 44 customer service call recordings in approximately 1.5 hours. I’m now seeking to grow as an **AI Engineer**, focusing on building scalable AI systems and turning intelligent technologies into impactful products.
+                                    Passionate about building practical AI and data-driven solutions that solve real-world problems. Experienced in developing automated AI pipelines, data analytics systems, and interactive dashboards, including a pipeline that processed 44 customer service call recordings in approximately 1.5 hours. I&apos;m now seeking to grow as an AI Engineer, focusing on building scalable AI systems and turning intelligent technologies into impactful products.
                                 </p>
                             </div>
                     </section>

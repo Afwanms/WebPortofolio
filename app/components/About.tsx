@@ -28,7 +28,7 @@ export default function About() {
             </h2>
 
             <p className="aboutDescription">
-              Hi, I'm Afwan Maulana Sidqi. I enjoy working with data, exploring AI, and building technology that solves real-world problems. With a background in Computer Engineering, I'm always curious about how technology can turn ideas and data into something useful.
+              Hi, I&apos;m Afwan Maulana Sidqi. I enjoy working with data, exploring AI, and building technology that solves real-world problems. With a background in Computer Engineering, I'm always curious about how technology can turn ideas and data into something useful.
             </p>
           </div>
 
