@@ -360,5 +360,53 @@ export const projects = [
     "/project-photo/vibration-alert/004.png",
   ],
 },
+{
+  id: 9,
+  slug: "nyc-taxi-streaming-pipeline",
 
+  title: "NYC Taxi Streaming Pipeline",
+  image: "/project-photo/nyc-taxi-streaming/001.png",
+  category: "DATA",
+
+  tags: [
+    "Python",
+    "Pandas",
+    "Apache Kafka",
+    "PostgreSQL",
+    "Docker",
+    "Power BI",
+  ],
+
+  period: "Aug 2026",
+  sortDate: "2026-08",
+
+  description:
+    "An end-to-end streaming data pipeline designed to simulate real-time processing of NYC Yellow Taxi trip data using Apache Kafka, with data validation, error handling, and analytical visualization.",
+
+  implementation:
+    "Built a batch-to-streaming pipeline that publishes taxi trip records from a Parquet dataset through a Python Kafka Producer, processes and validates events using a Kafka Consumer, routes invalid records to a Dead Letter Queue (DLQ), and stores validated data in PostgreSQL. The pipeline was containerized using Docker and integrated with Power BI for analytical visualization.",
+
+  concepts: [
+    "Data Engineering",
+    "Real-Time Data Streaming",
+    "Event-Driven Architecture",
+    "Data Validation",
+    "Data Quality",
+    "Dead Letter Queue",
+    "Data Visualization",
+  ],
+
+  impact:
+    "Developed a functional streaming pipeline capable of processing, validating, and storing taxi trip events while handling invalid records separately through a Dead Letter Queue and providing analytical insights through Power BI.",
+
+  github:
+    "https://github.com/Afwanms/NYCTaxiStreamingPipeline",
+
+  documentation: [
+    "/project-photo/nyc-taxi-streaming/002.png",
+    "/project-photo/nyc-taxi-streaming/003.png",
+    "/project-photo/nyc-taxi-streaming/004.png",
+    "/project-photo/nyc-taxi-streaming/005.png"
+  ],
+},
 ];

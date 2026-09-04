@@ -149,7 +149,7 @@ export default function RecruiterView() {
                                 <div className="recruiterProjectTools">
                                     Python · Kafka · PostgreSQL · Docker · PowerBI
                                 </div>
-                                <Link href="/projects/NYC-streaming-pipeline">
+                                <Link href="/projects/nyc-taxi-streaming-pipeline">
                                     VIEW PROJECT →
                                 </Link>
                             </article>
