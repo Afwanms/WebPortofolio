@@ -154,7 +154,55 @@
 }
 
 @media (max-width: 600px) {
-  .navLinks a:not(.active) {
+  .navbar {
+    height: 75px;
+    padding: 0 15px;
+
+    grid-template-columns: auto minmax(0, 1fr) auto;
+
+    gap: 12px;
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+
+  .navLinks {
+    min-width: 0;
+
+    display: flex;
+    justify-self: stretch;
+
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 5px 2px 12px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navLinks::-webkit-scrollbar {
     display: none;
+  }
+
+  .navLinks a {
+    flex: 0 0 auto;
+
+    white-space: nowrap;
+
+    font-size: 9px;
+  }
+
+  .navRecruiter {
+    height: 32px;
+
+    padding: 0 10px;
+
+    font-size: 8px;
+
+    white-space: nowrap;
   }
 }
